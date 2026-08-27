@@ -7,7 +7,6 @@ import CTA from '../../components/CTA/CTA';
 import Icon from '../../components/Icon/Icon';
 import ChatMockup from './ChatMockup';
 import { AI_FAQS } from '../../data/faqs';
-import { useUI } from '../../context/UIContext';
 import './AISalesAssistant.css';
 
 const DIAGRAM_STAGES = [
@@ -29,7 +28,6 @@ const CAPABILITIES = [
 ];
 
 export default function AISalesAssistant() {
-  const { openChat } = useUI();
   return (
     <>
       <SEO
@@ -52,12 +50,6 @@ export default function AISalesAssistant() {
         ctaSource="ai_assistant_hero"
         visual={<ChatMockup />}
       />
-
-      <div className="ai-assistant-talk">
-        <button type="button" className="link-arrow" onClick={() => openChat('ai_assistant_page')}>
-          <Icon name="bot" size={16} /> Talk to the Assistant
-        </button>
-      </div>
 
       <section className="section section--off">
         <div className="container">
