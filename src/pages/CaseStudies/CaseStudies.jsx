@@ -3,6 +3,7 @@ import SEO from '../../components/SEO/SEO';
 import { breadcrumbSchema } from '../../components/SEO/schema';
 import CaseStudyCard from '../../components/CaseStudyCard/CaseStudyCard';
 import CTA from '../../components/CTA/CTA';
+import Reveal from '../../components/Reveal/Reveal';
 import { CASE_STUDIES, CASE_STUDY_FILTERS } from '../../data/caseStudies';
 import './CaseStudies.css';
 
@@ -40,9 +41,9 @@ export default function CaseStudies() {
               </button>
             ))}
           </div>
-          <div className="grid grid-3">
+          <Reveal group className="grid grid-3">
             {filtered.map((s) => <CaseStudyCard key={s.key} study={s} />)}
-          </div>
+          </Reveal>
         </div>
       </section>
 

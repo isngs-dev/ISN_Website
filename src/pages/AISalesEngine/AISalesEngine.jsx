@@ -5,6 +5,7 @@ import Workflow from '../../components/Workflow/Workflow';
 import CTA from '../../components/CTA/CTA';
 import Icon from '../../components/Icon/Icon';
 import MiniFlow from '../../components/MiniFlow/MiniFlow';
+import Reveal from '../../components/Reveal/Reveal';
 import './AISalesEngine.css';
 
 const HERO_FLOW = [
@@ -57,28 +58,28 @@ export default function AISalesEngine() {
 
       <section className="section section--off">
         <div className="container">
-          <div className="section-head section-head--center">
+          <Reveal className="section-head section-head--center">
             <p className="eyebrow">The Flow</p>
             <h2>From First Click to Full Funnel Reporting.</h2>
-          </div>
+          </Reveal>
           <Workflow stages={DIAGRAM_STAGES} />
         </div>
       </section>
 
       <section className="section">
         <div className="container">
-          <div className="section-head section-head--center">
+          <Reveal className="section-head section-head--center">
             <p className="eyebrow">Highlights</p>
             <h2>One System Instead of Five Disconnected Tools.</h2>
-          </div>
-          <div className="engine-highlights">
+          </Reveal>
+          <Reveal group className="engine-highlights">
             {HIGHLIGHTS.map((h) => (
               <div className="engine-highlights__item" key={h.label}>
                 <Icon name={h.icon} size={20} />
                 <span>{h.label}</span>
               </div>
             ))}
-          </div>
+          </Reveal>
         </div>
       </section>
 

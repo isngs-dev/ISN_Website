@@ -3,6 +3,7 @@ import SEO from '../../components/SEO/SEO';
 import { breadcrumbSchema } from '../../components/SEO/schema';
 import Icon from '../../components/Icon/Icon';
 import CTA from '../../components/CTA/CTA';
+import Reveal from '../../components/Reveal/Reveal';
 import { INSIGHTS, INSIGHTS_CATEGORIES } from '../../data/insights';
 import './Insights.css';
 
@@ -42,7 +43,7 @@ export default function Insights() {
             ))}
           </div>
 
-          <div className="grid grid-3">
+          <Reveal group className="grid grid-3">
             {filtered.map((post) => (
               <div className="card insight-card" key={post.key}>
                 <p className="badge">{post.category}</p>
@@ -51,7 +52,7 @@ export default function Insights() {
                 <span className="link-arrow insight-card__soon">Full Article Coming Soon <Icon name="arrow" size={14} /></span>
               </div>
             ))}
-          </div>
+          </Reveal>
         </div>
       </section>
 

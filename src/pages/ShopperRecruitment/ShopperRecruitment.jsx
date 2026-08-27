@@ -3,6 +3,7 @@ import { serviceSchema, breadcrumbSchema } from '../../components/SEO/schema';
 import Workflow from '../../components/Workflow/Workflow';
 import CTA from '../../components/CTA/CTA';
 import Button from '../../components/Button/Button';
+import Reveal from '../../components/Reveal/Reveal';
 import RecruitmentPlatform from './RecruitmentPlatform';
 import { trackStrategyCallCTA } from '../../lib/analytics';
 
@@ -43,16 +44,16 @@ export default function ShopperRecruitment() {
 
       <section className="section">
         <div className="container">
-          <RecruitmentPlatform />
+          <Reveal><RecruitmentPlatform /></Reveal>
         </div>
       </section>
 
       <section className="section section--off">
         <div className="container">
-          <div className="section-head section-head--center">
+          <Reveal className="section-head section-head--center">
             <p className="eyebrow">The Process</p>
             <h2>From Project Need to Shopper Assignment.</h2>
-          </div>
+          </Reveal>
           <Workflow stages={PROCESS_STAGES} />
         </div>
       </section>

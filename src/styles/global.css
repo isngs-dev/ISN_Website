@@ -197,6 +197,33 @@ h4, .h4 { font-size: var(--fs-h4); font-weight: 700; line-height: 1.3; }
   .reveal { opacity: 1; transform: none; }
 }
 
+/* Staggered reveal for grid/row children (cards, etc.) */
+.reveal-group > * {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity var(--dur-slow) var(--ease-out), transform var(--dur-slow) var(--ease-out);
+}
+.reveal-group.is-visible > * { opacity: 1; transform: translateY(0); }
+.reveal-group.is-visible > *:nth-child(2) { transition-delay: 80ms; }
+.reveal-group.is-visible > *:nth-child(3) { transition-delay: 160ms; }
+.reveal-group.is-visible > *:nth-child(4) { transition-delay: 240ms; }
+.reveal-group.is-visible > *:nth-child(n+5) { transition-delay: 320ms; }
+@media (prefers-reduced-motion: reduce) {
+  .reveal-group > * { opacity: 1; transform: none; }
+}
+
+/* Word-by-word heading reveal */
+.reveal-text span {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(0.4em);
+  transition: opacity var(--dur-base) var(--ease-out), transform var(--dur-base) var(--ease-out);
+}
+.reveal-text.is-visible span { opacity: 1; transform: translateY(0); }
+@media (prefers-reduced-motion: reduce) {
+  .reveal-text span { opacity: 1; transform: none; }
+}
+
 /* ---------------------------------- Utility ---------------------------------- */
 .visually-hidden {
   position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;

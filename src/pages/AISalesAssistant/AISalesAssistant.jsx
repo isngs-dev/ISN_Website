@@ -5,6 +5,7 @@ import Workflow from '../../components/Workflow/Workflow';
 import FAQ from '../../components/FAQ/FAQ';
 import CTA from '../../components/CTA/CTA';
 import Icon from '../../components/Icon/Icon';
+import Reveal from '../../components/Reveal/Reveal';
 import ChatMockup from './ChatMockup';
 import { AI_FAQS } from '../../data/faqs';
 import './AISalesAssistant.css';
@@ -53,21 +54,21 @@ export default function AISalesAssistant() {
 
       <section className="section section--off">
         <div className="container">
-          <div className="section-head section-head--center">
+          <Reveal className="section-head section-head--center">
             <p className="eyebrow">How It Works</p>
             <h2>From Admin Configuration to Human Handoff.</h2>
-          </div>
+          </Reveal>
           <Workflow stages={DIAGRAM_STAGES} />
         </div>
       </section>
 
       <section className="section">
         <div className="container">
-          <div className="section-head section-head--center">
+          <Reveal className="section-head section-head--center">
             <p className="eyebrow">Capabilities</p>
             <h2>Built for Real Sales Conversations.</h2>
-          </div>
-          <div className="grid grid-4">
+          </Reveal>
+          <Reveal group className="grid grid-4">
             {CAPABILITIES.map((c) => (
               <div className="card ai-capability" key={c.title}>
                 <div className="ai-capability__icon"><Icon name={c.icon} size={20} /></div>
@@ -75,7 +76,7 @@ export default function AISalesAssistant() {
                 <p className="text-muted body-sm">{c.copy}</p>
               </div>
             ))}
-          </div>
+          </Reveal>
         </div>
       </section>
 

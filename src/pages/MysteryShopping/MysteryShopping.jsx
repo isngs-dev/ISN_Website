@@ -6,6 +6,7 @@ import ProductCard from '../../components/ProductCard/ProductCard';
 import FAQ from '../../components/FAQ/FAQ';
 import CTA from '../../components/CTA/CTA';
 import MiniFlow from '../../components/MiniFlow/MiniFlow';
+import Reveal from '../../components/Reveal/Reveal';
 import { MS_FAQS } from '../../data/faqs';
 
 const HERO_FLOW = [
@@ -85,13 +86,13 @@ export default function MysteryShopping() {
 
       <section id="growth" className="section">
         <div className="container">
-          <div className="section-head section-head--center">
+          <Reveal className="section-head section-head--center">
             <p className="eyebrow">Solution Pillars</p>
             <h2>Four Capabilities. One Connected Operation.</h2>
-          </div>
-          <div className="grid grid-4">
+          </Reveal>
+          <Reveal group className="grid grid-4">
             {PILLARS.map((p) => <ProductCard key={p.key} product={p} />)}
-          </div>
+          </Reveal>
         </div>
       </section>
 

@@ -4,6 +4,8 @@ import { organizationSchema } from '../../components/SEO/schema';
 import Button from '../../components/Button/Button';
 import Icon from '../../components/Icon/Icon';
 import Workflow from '../../components/Workflow/Workflow';
+import Reveal from '../../components/Reveal/Reveal';
+import RevealText from '../../components/Reveal/RevealText';
 import IndustryCard from '../../components/IndustryCard/IndustryCard';
 import ProductCard from '../../components/ProductCard/ProductCard';
 import OutcomeCard from '../../components/OutcomeCard/OutcomeCard';
@@ -57,7 +59,7 @@ export default function Home() {
 
       {/* 2. Trust strip */}
       <section className="trust-strip section--dark section--tight">
-        <div className="container">
+        <Reveal as="div" className="container">
           <p className="trust-strip__line body-sm">
             Built on years of U.S. client delivery, deep Mystery Shopping expertise and a growing portfolio of AI-powered growth systems.
           </p>
@@ -67,20 +69,20 @@ export default function Home() {
               <span key={i} className="trust-strip__logo placeholder-tag">{c.name}</span>
             ))}
           </div>
-        </div>
+        </Reveal>
       </section>
 
       {/* 3. Outcome selector */}
       <section className="section">
         <div className="container">
-          <div className="section-head section-head--center">
+          <Reveal as="div" className="section-head section-head--center">
             <p className="eyebrow">Start Here</p>
             <h2>Start With the Outcome You Need.</h2>
             <p className="text-muted">Choose the business outcome. We'll show you the system behind it.</p>
-          </div>
-          <div className="grid grid-3">
+          </Reveal>
+          <Reveal as="div" group className="grid grid-3">
             {OUTCOMES.map((o) => <OutcomeCard key={o.title} outcome={o} />)}
-          </div>
+          </Reveal>
         </div>
       </section>
 
@@ -89,7 +91,7 @@ export default function Home() {
         <div className="container">
           <div className="section-head">
             <p className="eyebrow eyebrow--on-dark">The iSN Growth Engine</p>
-            <h2>One Connected Engine. From First Click to Qualified Opportunity.</h2>
+            <RevealText as="h2" text="One Connected Engine. From First Click to Qualified Opportunity." />
             <p className="text-on-dark-muted body-lg">
               Most agencies stop at traffic or leads. iSN connects acquisition, conversion and follow-through so fewer opportunities disappear between the ad click and your sales team.
             </p>
@@ -104,26 +106,26 @@ export default function Home() {
       {/* 5. Industries */}
       <section className="section section--off">
         <div className="container">
-          <div className="section-head section-head--center">
+          <Reveal as="div" className="section-head section-head--center">
             <p className="eyebrow">Industries</p>
             <h2>Growth Systems Built Around How Your Industry Actually Works.</h2>
-          </div>
-          <div className="grid grid-3">
+          </Reveal>
+          <Reveal as="div" group className="grid grid-3">
             {INDUSTRIES.map((ind) => <IndustryCard key={ind.key} industry={ind} />)}
-          </div>
+          </Reveal>
         </div>
       </section>
 
       {/* 6. AI Products */}
       <section className="section">
         <div className="container">
-          <div className="section-head section-head--center">
+          <Reveal as="div" className="section-head section-head--center">
             <p className="eyebrow">AI Products</p>
             <h2>AI Built Around Real Workflows, Not Just Conversations.</h2>
-          </div>
-          <div className="grid grid-4">
+          </Reveal>
+          <Reveal as="div" group className="grid grid-4">
             {PRODUCTS.map((p) => <ProductCard key={p.key} product={p} />)}
-          </div>
+          </Reveal>
         </div>
       </section>
 
@@ -147,11 +149,11 @@ export default function Home() {
       {/* 8. Why iSN */}
       <section className="section section--off">
         <div className="container">
-          <div className="section-head section-head--center">
+          <Reveal as="div" className="section-head section-head--center">
             <p className="eyebrow">Why iSN</p>
             <h2>More Than Marketing. More Than Technology.</h2>
-          </div>
-          <div className="grid grid-3 why-isn-grid">
+          </Reveal>
+          <Reveal as="div" group className="grid grid-3 why-isn-grid">
             {WHY_ISN.map((w, i) => (
               <div className="card why-isn-card" key={w.title}>
                 <div className="why-isn-card__icon"><Icon name={WHY_ICONS[i]} size={22} /></div>
@@ -159,20 +161,20 @@ export default function Home() {
                 <p className="text-muted body-sm">{w.copy}</p>
               </div>
             ))}
-          </div>
+          </Reveal>
         </div>
       </section>
 
       {/* 9. Case study preview */}
       <section className="section">
         <div className="container">
-          <div className="section-head">
+          <Reveal as="div" className="section-head">
             <p className="eyebrow">Case Studies</p>
             <h2>Show the Outcome, Not the Activity.</h2>
-          </div>
-          <div className="grid grid-4">
+          </Reveal>
+          <Reveal as="div" group className="grid grid-4">
             {CASE_STUDIES.map((s) => <CaseStudyCard key={s.key} study={s} />)}
-          </div>
+          </Reveal>
           <div className="section-cta">
             <Link to="/case-studies" className="link-arrow">View all case studies <Icon name="arrow" size={16} /></Link>
           </div>
@@ -182,19 +184,19 @@ export default function Home() {
       {/* 10. Testimonials */}
       <section className="section section--off">
         <div className="container">
-          <div className="section-head section-head--center">
+          <Reveal as="div" className="section-head section-head--center">
             <p className="eyebrow">Client Feedback</p>
             <h2>Trusted by Clients We've Worked With for Years.</h2>
-          </div>
-          <div className="grid grid-3">
+          </Reveal>
+          <Reveal as="div" group className="grid grid-3">
             {TESTIMONIALS.map((t) => <Testimonial key={t.name} testimonial={t} />)}
-          </div>
+          </Reveal>
         </div>
       </section>
 
       {/* 11. Final CTA */}
       <section className="section section--dark final-cta">
-        <div className="container final-cta__grid">
+        <Reveal as="div" className="container final-cta__grid">
           <div className="final-cta__copy">
             <h2>Ready to Build a Better Growth Engine?</h2>
             <p className="body-lg text-on-dark-muted">
@@ -219,7 +221,7 @@ export default function Home() {
               <p className="body-sm text-on-dark-muted">Tue, 2:30 PM — 30 min</p>
             </div>
           </div>
-        </div>
+        </Reveal>
       </section>
     </>
   );

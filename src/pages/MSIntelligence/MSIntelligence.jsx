@@ -4,6 +4,7 @@ import PageHero from '../../components/Hero/PageHero';
 import Workflow from '../../components/Workflow/Workflow';
 import CTA from '../../components/CTA/CTA';
 import MiniFlow from '../../components/MiniFlow/MiniFlow';
+import Reveal from '../../components/Reveal/Reveal';
 import DashboardMockup from './DashboardMockup';
 
 const HERO_FLOW = [
@@ -45,21 +46,21 @@ export default function MSIntelligence() {
 
       <section className="section section--off">
         <div className="container">
-          <div className="section-head section-head--center">
+          <Reveal className="section-head section-head--center">
             <p className="eyebrow">Data Pipeline</p>
             <h2>From Raw Shop Data to AI-Supported Decisions.</h2>
-          </div>
+          </Reveal>
           <Workflow stages={PIPELINE_STAGES} />
         </div>
       </section>
 
       <section className="section">
         <div className="container">
-          <div className="section-head section-head--center">
+          <Reveal className="section-head section-head--center">
             <p className="eyebrow">Dashboard Modules</p>
             <h2>Program, Region and Location Performance in One View.</h2>
-          </div>
-          <DashboardMockup />
+          </Reveal>
+          <Reveal><DashboardMockup /></Reveal>
         </div>
       </section>
 

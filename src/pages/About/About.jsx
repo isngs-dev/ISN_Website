@@ -3,6 +3,7 @@ import { organizationSchema, breadcrumbSchema } from '../../components/SEO/schem
 import CTA from '../../components/CTA/CTA';
 import Icon from '../../components/Icon/Icon';
 import Testimonial from '../../components/Testimonial/Testimonial';
+import Reveal from '../../components/Reveal/Reveal';
 import { TESTIMONIALS } from '../../data/testimonials';
 import './About.css';
 
@@ -33,7 +34,7 @@ export default function About() {
 
       <section className="section">
         <div className="container">
-          <div className="about-story">
+          <Reveal group className="about-story">
             {STORY.map((s, i) => (
               <div className="about-story__row" key={s.title}>
                 <div className="about-story__marker">
@@ -46,28 +47,28 @@ export default function About() {
                 </div>
               </div>
             ))}
-          </div>
+          </Reveal>
         </div>
       </section>
 
       <section className="section section--off">
         <div className="container">
-          <div className="about-team-placeholder card">
+          <Reveal className="about-team-placeholder card">
             <p className="placeholder-tag">[TEAM IMAGE REQUIRED]</p>
             <p className="text-muted body-sm">Real iSN team and office photography will be added here.</p>
-          </div>
+          </Reveal>
         </div>
       </section>
 
       <section className="section">
         <div className="container">
-          <div className="section-head section-head--center">
+          <Reveal className="section-head section-head--center">
             <p className="eyebrow">Client Feedback</p>
             <h2>What Clients Say.</h2>
-          </div>
-          <div className="grid grid-3">
+          </Reveal>
+          <Reveal group className="grid grid-3">
             {TESTIMONIALS.map((t) => <Testimonial key={t.name} testimonial={t} />)}
-          </div>
+          </Reveal>
         </div>
       </section>
 

@@ -5,6 +5,7 @@ import MiniFlow from '../../components/MiniFlow/MiniFlow';
 import Workflow from '../../components/Workflow/Workflow';
 import FAQ from '../../components/FAQ/FAQ';
 import CTA from '../../components/CTA/CTA';
+import Reveal from '../../components/Reveal/Reveal';
 import FunnelDashboard from './FunnelDashboard';
 import { ROOFING_FAQS } from '../../data/faqs';
 
@@ -55,33 +56,33 @@ export default function Roofing() {
 
       <section className="section">
         <div className="container">
-          <div className="section-head">
+          <Reveal className="section-head">
             <p className="eyebrow">The Problem</p>
             <h2>A Lead Is Not the Same as an Inspection.</h2>
             <p className="body-lg text-muted">
               Roofing businesses often pay for clicks and leads, then lose momentum through slow follow-up, missed calls, low-intent inquiries or scheduling friction. iSN is designed to reduce that gap by engaging homeowners immediately and guiding qualified prospects toward an inspection slot.
             </p>
-          </div>
+          </Reveal>
         </div>
       </section>
 
       <section id="how-it-works" className="section section--off">
         <div className="container">
-          <div className="section-head section-head--center">
+          <Reveal className="section-head section-head--center">
             <p className="eyebrow">How It Works</p>
             <h2>Seven Steps From Ad Click to Booked Inspection.</h2>
-          </div>
+          </Reveal>
           <Workflow stages={HOW_IT_WORKS} />
         </div>
       </section>
 
       <section className="section">
         <div className="container">
-          <div className="section-head section-head--center">
+          <Reveal className="section-head section-head--center">
             <p className="eyebrow">Full-Funnel View</p>
             <h2>From Ad Spend to Jobs Won.</h2>
-          </div>
-          <FunnelDashboard />
+          </Reveal>
+          <Reveal><FunnelDashboard /></Reveal>
         </div>
       </section>
 

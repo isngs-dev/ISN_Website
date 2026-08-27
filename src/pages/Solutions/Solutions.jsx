@@ -3,6 +3,8 @@ import { breadcrumbSchema } from '../../components/SEO/schema';
 import Workflow from '../../components/Workflow/Workflow';
 import CTA from '../../components/CTA/CTA';
 import Icon from '../../components/Icon/Icon';
+import Reveal from '../../components/Reveal/Reveal';
+import RevealText from '../../components/Reveal/RevealText';
 import { GROWTH_ENGINE_STAGES } from '../../data/growthEngine';
 import './Solutions.css';
 
@@ -37,7 +39,7 @@ export default function Solutions() {
 
       <section className="section">
         <div className="container">
-          <div className="grid grid-3">
+          <Reveal group className="grid grid-3">
             {SOLUTIONS.map((s) => (
               <div className="card solution-card" id={s.id} key={s.id}>
                 <div className="solution-card__icon"><Icon name={s.icon} size={22} /></div>
@@ -45,7 +47,7 @@ export default function Solutions() {
                 <p className="text-muted body-sm">{s.copy}</p>
               </div>
             ))}
-          </div>
+          </Reveal>
         </div>
       </section>
 
@@ -53,7 +55,7 @@ export default function Solutions() {
         <div className="container">
           <div className="section-head">
             <p className="eyebrow eyebrow--on-dark">The iSN Growth Engine</p>
-            <h2>One Connected Engine. From First Click to Qualified Opportunity.</h2>
+            <RevealText as="h2" text="One Connected Engine. From First Click to Qualified Opportunity." />
             <p className="text-on-dark-muted body-lg">
               Most agencies stop at traffic or leads. iSN connects acquisition, conversion and follow-through so fewer opportunities disappear between the ad click and your sales team.
             </p>

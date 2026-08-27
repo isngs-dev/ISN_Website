@@ -2,6 +2,7 @@ import SEO from '../../components/SEO/SEO';
 import { breadcrumbSchema } from '../../components/SEO/schema';
 import ProductCard from '../../components/ProductCard/ProductCard';
 import CTA from '../../components/CTA/CTA';
+import Reveal from '../../components/Reveal/Reveal';
 import { PRODUCTS } from '../../data/products';
 
 export default function AIProducts() {
@@ -26,9 +27,9 @@ export default function AIProducts() {
 
       <section className="section">
         <div className="container">
-          <div className="grid grid-2">
+          <Reveal group className="grid grid-2">
             {PRODUCTS.map((p) => <ProductCard key={p.key} product={p} />)}
-          </div>
+          </Reveal>
         </div>
       </section>
 

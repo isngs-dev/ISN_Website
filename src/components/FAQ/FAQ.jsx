@@ -1,14 +1,16 @@
 import { useState } from 'react';
 import Icon from '../Icon/Icon';
+import useReveal from '../../hooks/useReveal';
 import './FAQ.css';
 
 export default function FAQ({ items, title = 'Frequently Asked Questions' }) {
   const [openIndex, setOpenIndex] = useState(0);
+  const ref = useReveal();
 
   return (
     <div className="faq">
       {title && <h2 className="h3 faq__title">{title}</h2>}
-      <div className="faq__list">
+      <div ref={ref} className="faq__list reveal-group">
         {items.map((item, i) => {
           const isOpen = openIndex === i;
           return (

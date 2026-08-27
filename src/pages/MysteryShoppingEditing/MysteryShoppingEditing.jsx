@@ -4,6 +4,7 @@ import PageHero from '../../components/Hero/PageHero';
 import Icon from '../../components/Icon/Icon';
 import CTA from '../../components/CTA/CTA';
 import MiniFlow from '../../components/MiniFlow/MiniFlow';
+import Reveal from '../../components/Reveal/Reveal';
 import './MysteryShoppingEditing.css';
 
 const HERO_FLOW = [
@@ -51,18 +52,18 @@ export default function MysteryShoppingEditing() {
 
       <section className="section">
         <div className="container">
-          <div className="section-head section-head--center">
+          <Reveal className="section-head section-head--center">
             <p className="eyebrow">Capabilities</p>
             <h2>Editorial and QA Support Across Every Shop Format.</h2>
-          </div>
-          <div className="editing-grid">
+          </Reveal>
+          <Reveal group className="editing-grid">
             {CAPABILITIES.map((c) => (
               <div className="editing-grid__item card" key={c.label}>
                 <Icon name={c.icon} size={20} />
                 <span>{c.label}</span>
               </div>
             ))}
-          </div>
+          </Reveal>
         </div>
       </section>
 

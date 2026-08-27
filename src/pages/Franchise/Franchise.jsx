@@ -5,6 +5,7 @@ import MiniFlow from '../../components/MiniFlow/MiniFlow';
 import FAQ from '../../components/FAQ/FAQ';
 import CTA from '../../components/CTA/CTA';
 import Icon from '../../components/Icon/Icon';
+import Reveal from '../../components/Reveal/Reveal';
 import { FRANCHISE_FAQS } from '../../data/faqs';
 import './Franchise.css';
 
@@ -71,11 +72,11 @@ export default function Franchise() {
 
       <section className="section">
         <div className="container">
-          <div className="section-head section-head--center">
+          <Reveal className="section-head section-head--center">
             <p className="eyebrow">How It Works</p>
             <h2>From Targeted Campaign to Qualified Discovery Call.</h2>
-          </div>
-          <div className="franchise-content">
+          </Reveal>
+          <Reveal group className="franchise-content">
             {CONTENT_SECTIONS.map((c) => (
               <div className="franchise-content__row" key={c.title}>
                 <div className="franchise-content__icon"><Icon name={c.icon} size={24} /></div>
@@ -85,7 +86,7 @@ export default function Franchise() {
                 </div>
               </div>
             ))}
-          </div>
+          </Reveal>
         </div>
       </section>
 
