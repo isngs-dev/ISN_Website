@@ -9,7 +9,7 @@
 }
 .workflow::-webkit-scrollbar { display: none; }
 
-.workflow__step { display: flex; align-items: center; gap: var(--space-2); flex-shrink: 0; }
+.workflow__step { display: flex; align-items: stretch; gap: var(--space-2); flex-shrink: 0; }
 
 .workflow__node {
   width: 168px;
@@ -43,7 +43,7 @@
 .workflow__label { font-weight: 700; font-size: 0.95rem; color: var(--text-primary); }
 .workflow__copy { font-size: 0.8rem; color: var(--text-secondary); margin-top: var(--space-2); line-height: 1.45; }
 
-.workflow__connector { color: var(--border-dark); flex-shrink: 0; opacity: 0.6; }
+.workflow__connector { display: flex; align-items: center; color: var(--border-dark); flex-shrink: 0; opacity: 0.6; }
 
 .workflow--dark .workflow__node { background: rgba(255,255,255,0.05); border-color: rgba(255,255,255,0.12); }
 .workflow--dark .workflow__icon { background: rgba(255,255,255,0.1); color: var(--brand-accent-light); }
