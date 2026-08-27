@@ -1,0 +1,5 @@
+.editing-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: var(--space-4); }
+.editing-grid__item { display: flex; flex-direction: column; align-items: flex-start; gap: var(--space-3); color: var(--brand-primary); font-weight: 700; font-size: 0.9rem; }
+.editing-grid__item span { color: var(--text-primary); }
+@media (max-width: 960px) { .editing-grid { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 640px) { .editing-grid { grid-template-columns: repeat(2, 1fr); } }

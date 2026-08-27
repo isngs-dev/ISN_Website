@@ -1,0 +1,2 @@
+.legal-content { max-width: 720px; margin-inline: auto; display: flex; flex-direction: column; gap: var(--space-4); }
+.legal-content .badge { align-self: flex-start; background: var(--surface-muted); color: var(--text-secondary); margin-bottom: var(--space-3); }

@@ -1,0 +1,48 @@
+.rec-platform .badge { margin-bottom: var(--space-4); display: block; width: fit-content; }
+.rec-platform__top { display: grid; grid-template-columns: 1fr 1.1fr; gap: var(--space-5); margin-bottom: var(--space-5); }
+.rec-platform__panel-title { display: flex; align-items: center; gap: var(--space-2); font-weight: 700; font-size: 0.85rem; color: var(--text-secondary); margin-bottom: var(--space-4); }
+
+.rec-platform__map-canvas {
+  position: relative;
+  height: 180px;
+  border-radius: var(--radius-sm);
+  background:
+    linear-gradient(var(--surface-muted) 1px, transparent 1px) 0 0 / 20px 20px,
+    linear-gradient(90deg, var(--surface-muted) 1px, transparent 1px) 0 0 / 20px 20px,
+    #f8fafc;
+}
+.rec-platform__pin { position: absolute; width: 12px; height: 12px; border-radius: 50%; background: var(--brand-primary); box-shadow: 0 0 0 4px rgba(37,61,126,0.15); }
+.rec-platform__pin--gap { background: var(--brand-accent); box-shadow: 0 0 0 4px rgba(238,131,35,0.18); }
+.rec-platform__legend { display: flex; gap: var(--space-4); margin-top: var(--space-3); font-size: 0.75rem; color: var(--text-muted); }
+.rec-platform__legend .dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 4px; }
+.dot--brand { background: var(--brand-primary); }
+.dot--gap { background: var(--brand-accent); }
+
+.rec-platform__candidate-list { display: flex; flex-direction: column; gap: var(--space-2); }
+.rec-platform__candidate {
+  display: grid;
+  grid-template-columns: 1.4fr 0.6fr 0.8fr 1fr;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-sm);
+  background: var(--surface-muted);
+  font-size: 0.78rem;
+}
+.rec-platform__candidate-name { font-weight: 700; }
+.rec-platform__candidate-distance, .rec-platform__candidate-match { color: var(--text-secondary); }
+.rec-platform__candidate-status { font-weight: 700; text-align: right; }
+.rec-platform__candidate-status--success { color: var(--success); }
+.rec-platform__candidate-status--accent { color: var(--brand-accent-dark); }
+.rec-platform__candidate-status--muted { color: var(--text-muted); }
+
+.rec-platform__funnel-bars { display: flex; flex-direction: column; gap: var(--space-3); }
+.rec-platform__funnel-row { display: grid; grid-template-columns: 130px 1fr; align-items: center; gap: var(--space-3); font-size: 0.8rem; color: var(--text-secondary); }
+.rec-platform__funnel-track { height: 10px; background: var(--surface-muted); border-radius: var(--radius-pill); overflow: hidden; }
+.rec-platform__funnel-fill { height: 100%; background: var(--gradient-brand); }
+
+@media (max-width: 800px) {
+  .rec-platform__top { grid-template-columns: 1fr; }
+  .rec-platform__candidate { grid-template-columns: 1fr 1fr; }
+  .rec-platform__candidate-status { text-align: left; }
+}

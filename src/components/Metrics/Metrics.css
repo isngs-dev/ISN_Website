@@ -1,0 +1,11 @@
+.metrics {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-5);
+  text-align: center;
+}
+.metrics__value { font-size: var(--fs-h3); font-weight: 800; color: var(--brand-accent); }
+.metrics__label { font-size: var(--fs-small); color: var(--text-on-dark-muted); margin-top: var(--space-1); }
+@media (max-width: 720px) {
+  .metrics { grid-template-columns: repeat(2, 1fr); }
+}

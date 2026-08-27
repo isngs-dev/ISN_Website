@@ -1,0 +1,7 @@
+.franchise-content { max-width: 760px; margin-inline: auto; display: flex; flex-direction: column; gap: var(--space-7); }
+.franchise-content__row { display: flex; gap: var(--space-5); align-items: flex-start; }
+.franchise-content__icon {
+  width: 52px; height: 52px; border-radius: var(--radius-md); flex-shrink: 0;
+  background: var(--surface-muted); color: var(--brand-primary);
+  display: flex; align-items: center; justify-content: center;
+}

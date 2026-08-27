@@ -1,0 +1,19 @@
+.about-story { max-width: 720px; margin-inline: auto; display: flex; flex-direction: column; }
+.about-story__row { display: flex; gap: var(--space-5); }
+.about-story__marker { display: flex; flex-direction: column; align-items: center; flex-shrink: 0; }
+.about-story__icon {
+  width: 52px; height: 52px; border-radius: 50%;
+  background: var(--surface-muted); color: var(--brand-primary);
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.about-story__line { flex: 1; width: 2px; background: var(--border); margin-block: var(--space-2); min-height: 32px; }
+.about-story__row > div:last-child { padding-bottom: var(--space-7); }
+.about-story__row:last-child > div:last-child { padding-bottom: 0; }
+
+.about-team-placeholder {
+  text-align: center;
+  padding: var(--space-9) var(--space-5);
+  display: flex; flex-direction: column; align-items: center; gap: var(--space-3);
+  background: var(--surface-muted);
+}

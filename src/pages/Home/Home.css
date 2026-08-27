@@ -1,0 +1,45 @@
+.home-hero { padding-block: var(--space-9) var(--space-8); overflow: hidden; }
+.home-hero__grid { display: grid; grid-template-columns: 1.05fr 0.95fr; gap: var(--space-8); align-items: center; }
+.home-hero__subhead { color: var(--text-on-dark-muted); margin-top: var(--space-5); max-width: 560px; }
+.home-hero__actions { display: flex; gap: var(--space-4); margin-top: var(--space-6); flex-wrap: wrap; }
+.home-hero__tertiary {
+  display: inline-flex; align-items: center; gap: var(--space-2);
+  margin-top: var(--space-5); background: none; border: none;
+  color: var(--brand-accent-light); font-weight: 700; font-size: 0.9rem;
+}
+.home-hero__tertiary:hover { color: #fff; }
+
+.trust-strip__line { text-align: center; color: var(--text-on-dark-muted); max-width: 640px; margin-inline: auto; margin-bottom: var(--space-6); }
+.trust-strip__logos { display: flex; justify-content: center; gap: var(--space-4); flex-wrap: wrap; margin-top: var(--space-6); }
+
+.section-cta { margin-top: var(--space-7); text-align: center; }
+
+.why-isn-grid { grid-template-columns: repeat(5, 1fr); }
+.why-isn-card { display: flex; flex-direction: column; align-items: flex-start; gap: var(--space-2); }
+.why-isn-card__icon {
+  width: 44px; height: 44px; border-radius: var(--radius-sm);
+  background: var(--surface-muted); color: var(--brand-primary);
+  display: flex; align-items: center; justify-content: center; margin-bottom: var(--space-2);
+}
+@media (max-width: 1024px) { .why-isn-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px) { .why-isn-grid { grid-template-columns: 1fr; } }
+
+.final-cta__grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: var(--space-8); align-items: center; }
+.final-cta__actions { display: flex; gap: var(--space-4); margin-top: var(--space-6); flex-wrap: wrap; }
+.final-cta__previews { display: flex; flex-direction: column; gap: var(--space-4); }
+.final-cta__preview-card {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.14);
+  border-radius: var(--radius-md);
+  padding: var(--space-5);
+  color: var(--brand-accent-light);
+}
+.final-cta__preview-card p.h4 { color: #fff; margin-top: var(--space-2); }
+
+@media (max-width: 960px) {
+  .home-hero__grid, .final-cta__grid { grid-template-columns: 1fr; }
+  .final-cta__previews { flex-direction: row; }
+}
+@media (max-width: 640px) {
+  .final-cta__previews { flex-direction: column; }
+}

@@ -1,0 +1,12 @@
+.case-filters { display: flex; flex-wrap: wrap; gap: var(--space-3); margin-bottom: var(--space-7); }
+.case-filters button {
+  padding: 0.5em 1.2em;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--border);
+  background: #fff;
+  font-weight: 700;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+.case-filters button:hover { border-color: var(--brand-primary); color: var(--brand-primary); }
+.case-filters button.is-active { background: var(--brand-primary); border-color: var(--brand-primary); color: #fff; }

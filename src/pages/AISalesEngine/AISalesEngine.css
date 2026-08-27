@@ -1,0 +1,10 @@
+.engine-highlights { display: flex; flex-wrap: wrap; justify-content: center; gap: var(--space-4); max-width: 900px; margin-inline: auto; }
+.engine-highlights__item {
+  display: flex; align-items: center; gap: var(--space-2);
+  padding: var(--space-3) var(--space-5);
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--border);
+  color: var(--brand-primary);
+  font-weight: 700;
+  font-size: 0.9rem;
+}

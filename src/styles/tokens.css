@@ -1,0 +1,91 @@
+/*
+  Design Tokens — iSN Business Solutions
+  Colors are derived from the existing iSN logo:
+    Navy  #253D7E  (sampled from logo mark)
+    Orange #EE8323 (sampled from logo dot)
+*/
+
+:root {
+  /* ---- Brand colors ---- */
+  --brand-primary: #253d7e;      /* logo navy */
+  --brand-primary-dark: #16274f; /* deeper navy for hovers */
+  --brand-primary-light: #4a63a0;
+  --brand-secondary: #3b5bb8;    /* supporting blue, derived from primary */
+  --brand-accent: #ee8323;       /* logo orange */
+  --brand-accent-dark: #c96912;
+  --brand-accent-light: #ffa14d;
+
+  /* ---- Neutrals ---- */
+  --bg-dark: #0d1a3a;      /* midnight navy background */
+  --bg-dark-2: #122350;
+  --bg-light: #ffffff;
+  --bg-off: #f6f7fb;       /* off-white */
+  --surface: #ffffff;
+  --surface-dark: #12224a;
+  --surface-muted: #eef1f8;
+
+  --text-primary: #101828;
+  --text-secondary: #4b5468;
+  --text-muted: #6b7280;
+  --text-on-dark: #f2f4fa;
+  --text-on-dark-muted: #aab3cc;
+
+  --border: #e3e6ef;
+  --border-dark: #24345f;
+
+  --success: #16a34a;
+  --success-bg: #e9f8ef;
+  --warning: #eab308;
+
+  /* ---- Gradients ---- */
+  --gradient-brand: linear-gradient(135deg, var(--brand-primary) 0%, var(--brand-secondary) 55%, var(--brand-accent) 100%);
+  --gradient-dark: linear-gradient(160deg, #0d1a3a 0%, #16274f 55%, #1c3163 100%);
+  --gradient-accent: linear-gradient(135deg, var(--brand-accent) 0%, var(--brand-accent-light) 100%);
+
+  /* ---- Radius ---- */
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-pill: 999px;
+
+  /* ---- Shadow ---- */
+  --shadow-sm: 0 1px 2px rgba(16, 24, 40, 0.06), 0 1px 3px rgba(16, 24, 40, 0.08);
+  --shadow-md: 0 4px 12px rgba(16, 24, 40, 0.08), 0 2px 4px rgba(16, 24, 40, 0.06);
+  --shadow-lg: 0 16px 40px rgba(16, 24, 40, 0.14), 0 4px 12px rgba(16, 24, 40, 0.08);
+  --shadow-glow: 0 0 0 1px rgba(238, 131, 35, 0.15), 0 8px 24px rgba(37, 61, 126, 0.18);
+
+  /* ---- Spacing scale ---- */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+  --space-9: 96px;
+  --space-10: 128px;
+
+  /* ---- Typography ---- */
+  --font-sans: 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+  --fs-h1: clamp(2.5rem, 2rem + 2.2vw, 4.75rem);
+  --fs-h2: clamp(1.9rem, 1.6rem + 1.4vw, 3.375rem);
+  --fs-h3: clamp(1.4rem, 1.2rem + 0.8vw, 2.125rem);
+  --fs-h4: clamp(1.15rem, 1.05rem + 0.4vw, 1.5rem);
+  --fs-body-lg: clamp(1.05rem, 1rem + 0.2vw, 1.3125rem);
+  --fs-body: clamp(0.95rem, 0.92rem + 0.1vw, 1.125rem);
+  --fs-small: 0.875rem;
+  --fs-eyebrow: 0.8125rem;
+
+  /* ---- Layout ---- */
+  --container-max: 1280px;
+  --container-pad: clamp(1.25rem, 4vw, 2.5rem);
+  --header-height: 76px;
+
+  /* ---- Motion ---- */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --dur-fast: 150ms;
+  --dur-base: 300ms;
+  --dur-slow: 600ms;
+}

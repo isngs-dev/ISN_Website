@@ -1,0 +1,8 @@
+.chat-mockup { max-width: 380px; margin-inline: auto; }
+.chat-mockup .badge { margin-bottom: var(--space-3); display: block; width: fit-content; margin-inline: auto; }
+.chat-mockup__window { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); box-shadow: var(--shadow-lg); overflow: hidden; }
+.chat-mockup__header { display: flex; align-items: center; gap: var(--space-2); background: var(--gradient-dark); color: #fff; padding: var(--space-4) var(--space-5); font-weight: 700; font-size: 0.9rem; }
+.chat-mockup__body { padding: var(--space-5); display: flex; flex-direction: column; gap: var(--space-3); }
+.chat-mockup__bubble { max-width: 85%; padding: 0.7em 1em; border-radius: var(--radius-md); font-size: 0.85rem; line-height: 1.5; }
+.chat-mockup__bubble--bot { align-self: flex-start; background: var(--surface-muted); border-bottom-left-radius: 4px; }
+.chat-mockup__bubble--user { align-self: flex-end; background: var(--brand-primary); color: #fff; border-bottom-right-radius: 4px; }

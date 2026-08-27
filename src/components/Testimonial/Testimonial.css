@@ -1,0 +1,5 @@
+.testimonial { display: flex; flex-direction: column; justify-content: space-between; height: 100%; }
+.testimonial blockquote { margin: 0 0 var(--space-5); font-size: var(--fs-body-lg); line-height: 1.6; color: var(--text-primary); }
+.testimonial figcaption { display: flex; flex-direction: column; }
+.testimonial__name { font-weight: 700; }
+.testimonial__title { font-size: var(--fs-small); color: var(--text-secondary); }

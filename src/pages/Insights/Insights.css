@@ -1,0 +1,2 @@
+.insight-card { display: flex; flex-direction: column; align-items: flex-start; gap: var(--space-3); }
+.insight-card .badge { background: var(--surface-muted); color: var(--brand-primary); }
