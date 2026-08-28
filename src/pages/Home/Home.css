@@ -1,4 +1,12 @@
-.home-hero { padding-block: var(--space-9) var(--space-8); overflow: hidden; }
+.home-hero {
+  padding-block: var(--space-9) var(--space-8);
+  overflow: hidden;
+}
+.home-hero.section--dark {
+  background:
+    linear-gradient(160deg, rgba(13, 26, 58, 0.88) 0%, rgba(22, 39, 79, 0.88) 55%, rgba(28, 49, 99, 0.88) 100%),
+    url('/images/hero-bg.jpg') center / cover no-repeat;
+}
 .home-hero__grid { display: grid; grid-template-columns: 1.05fr 0.95fr; gap: var(--space-8); align-items: center; }
 .home-hero__subhead { color: var(--text-on-dark-muted); margin-top: var(--space-5); max-width: 560px; }
 .home-hero__actions { display: flex; gap: var(--space-4); margin-top: var(--space-6); flex-wrap: wrap; }
