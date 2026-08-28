@@ -10,17 +10,17 @@ import './AISalesEngine.css';
 
 const HERO_FLOW = [
   { icon: 'attract', label: 'Traffic' },
-  { icon: 'layers', label: 'Landing Experience' },
+  { icon: 'layers', label: 'Landing Page' },
   { icon: 'chat', label: 'AI Conversation' },
   { icon: 'pipeline', label: 'CRM' },
 ];
 
 const DIAGRAM_STAGES = [
   { stage: '01', label: 'Traffic', icon: 'attract' },
-  { stage: '02', label: 'Landing Experience', icon: 'convert' },
+  { stage: '02', label: 'Landing Page', icon: 'convert' },
   { stage: '03', label: 'AI Conversation', icon: 'chat' },
   { stage: '04', label: 'Qualified Lead', icon: 'qualify' },
-  { stage: '05', label: 'Booking', icon: 'schedule' },
+  { stage: '05', label: 'Meeting Book', icon: 'schedule' },
   { stage: '06', label: 'CRM', icon: 'sync' },
   { stage: '07', label: 'Reporting', icon: 'bar' },
 ];

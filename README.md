@@ -56,7 +56,6 @@ All of the following are wired with clean adapter seams but are **not**
 connected to live services. Search the codebase for the bracketed markers
 below before launch:
 
-- `[VERIFIED METRIC REQUIRED]` — real trust-strip numbers, once approved
 - `[CLIENT LOGO REQUIRED]` — licensed client logo files
 - `[CASE STUDY DATA REQUIRED]` — verified outcome metrics per case study
 - `[TEAM IMAGE REQUIRED]` — real team/office photography

@@ -15,7 +15,7 @@ export default function DashboardMockup() {
       <div className="ms-dash__grid">
         <div className="ms-dash__card ms-dash__card--score card">
           <p className="ms-dash__card-title">Overall Score</p>
-          <p className="ms-dash__big-number">88.4</p>
+          <p className="ms-dash__big-number">94.8</p>
           <p className="ms-dash__trend"><Icon name="growth" size={14} /> +2.1 vs last period</p>
         </div>
 
@@ -32,9 +32,9 @@ export default function DashboardMockup() {
 
         <div className="ms-dash__card card">
           <p className="ms-dash__card-title">Volume &amp; Completion</p>
-          <div className="ms-dash__stat-row"><span>Shops completed</span><strong>[DATA REQUIRED]</strong></div>
-          <div className="ms-dash__stat-row"><span>Completion rate</span><strong>[DATA REQUIRED]</strong></div>
-          <div className="ms-dash__stat-row"><span>Avg. turnaround</span><strong>[DATA REQUIRED]</strong></div>
+          <div className="ms-dash__stat-row"><span>Shops completed</span><strong>500</strong></div>
+          <div className="ms-dash__stat-row"><span>Completion rate</span><strong>97%</strong></div>
+          <div className="ms-dash__stat-row"><span>Avg. turnaround</span><strong>36hrs</strong></div>
         </div>
 
         <div className="ms-dash__card card">

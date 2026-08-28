@@ -8,14 +8,14 @@ import Reveal from '../../components/Reveal/Reveal';
 import DashboardMockup from './DashboardMockup';
 
 const HERO_FLOW = [
-  { icon: 'layers', label: 'SASSIE / Shopmetrics' },
-  { icon: 'sync', label: 'Data Connector' },
+  { icon: 'layers', label: 'MS Platforms' },
+  { icon: 'sync', label: 'Data Mapping' },
   { icon: 'dashboard', label: 'Live Dashboard' },
 ];
 
 const PIPELINE_STAGES = [
-  { stage: '01', label: 'SASSIE / Shopmetrics', icon: 'layers' },
-  { stage: '02', label: 'Data Connector', icon: 'sync' },
+  { stage: '01', label: 'MS Platforms', icon: 'layers' },
+  { stage: '02', label: 'Data Mapping', icon: 'sync' },
   { stage: '03', label: 'Live Dashboard', icon: 'dashboard' },
   { stage: '04', label: 'Program / Location Analytics', icon: 'bar' },
   { stage: '05', label: 'AI Recommendations', icon: 'ai' },
@@ -47,7 +47,7 @@ export default function MSIntelligence() {
       <section className="section section--off">
         <div className="container">
           <Reveal className="section-head section-head--center">
-            <p className="eyebrow">Data Pipeline</p>
+            <p className="eyebrow">Process Workflow</p>
             <h2>From Raw Shop Data to AI-Supported Decisions.</h2>
           </Reveal>
           <Workflow stages={PIPELINE_STAGES} />

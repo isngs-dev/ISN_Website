@@ -2,6 +2,7 @@
 // Used by Header (desktop mega-menu + mobile nav) and Footer.
 
 export const NAV = [
+  { label: 'About', to: '/about' },
   {
     label: 'Solutions',
     to: '/solutions',
@@ -9,8 +10,8 @@ export const NAV = [
       {
         heading: 'Solutions',
         items: [
-          { label: 'Digital Growth', to: '/solutions#digital-growth', description: 'Acquisition campaigns that fuel the engine.' },
           { label: 'iSN Growth Engine', to: '/solutions#growth-engine', description: 'Attract, convert, qualify, schedule, sync.' },
+          { label: 'Digital Growth', to: '/solutions#digital-growth', description: 'Acquisition campaigns that fuel the engine.' },
           { label: 'AI Sales Automation', to: '/ai-products', description: 'AI that engages, qualifies, and routes leads.' },
           { label: 'Conversion Landing Pages', to: '/solutions#landing-pages', description: 'Purpose-built pages for every campaign.' },
           { label: 'CRM & Calendar Automation', to: '/solutions#crm-automation', description: 'Sync qualified opportunities automatically.' },
@@ -49,7 +50,6 @@ export const NAV = [
     ],
   },
   { label: 'Case Studies', to: '/case-studies' },
-  { label: 'About', to: '/about' },
   { label: 'Insights', to: '/insights' },
 ];
 

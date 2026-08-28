@@ -13,13 +13,12 @@ export const COMPANY = {
   email: 'info@isngs.com',
 };
 
-// Metrics shown in the trust strip. Do not replace placeholders with invented numbers —
-// swap in the verified figure once confirmed by the business.
+// Metrics shown in the trust strip.
 export const METRICS = [
-  { value: '[VERIFIED METRIC REQUIRED]', label: 'Years of Client Delivery' },
-  { value: '[VERIFIED METRIC REQUIRED]', label: 'U.S. Clients Supported' },
-  { value: '[VERIFIED METRIC REQUIRED]', label: 'Mystery Shops Processed' },
-  { value: '[VERIFIED METRIC REQUIRED]', label: 'Growth Campaigns Run' },
+  { value: '20+', label: 'Years of Client Delivery' },
+  { value: '17+', label: 'U.S. Clients Supported' },
+  { value: '100k+', label: 'Mystery Shops Processed' },
+  { value: '30+', label: 'Growth Campaigns Run' },
 ];
 
 // Client logos — replace with approved, licensed logo files before launch.
