@@ -17,7 +17,7 @@
   padding: var(--space-4);
   transition: transform var(--dur-base) var(--ease-out);
 }
-.workflow__node.border-glow-card { border-color: var(--border); }
+.workflow__node.border-glow-card { border-color: var(--border); box-shadow: var(--shadow-sm); }
 .workflow__node.border-glow-card:hover { transform: translate3d(0, -3px, 0.01px); }
 
 .workflow__icon {
