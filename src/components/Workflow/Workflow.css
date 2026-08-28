@@ -14,14 +14,11 @@
 
 .workflow__node {
   width: 168px;
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-md);
   padding: var(--space-4);
-  box-shadow: var(--shadow-sm);
-  transition: transform var(--dur-base) var(--ease-out), box-shadow var(--dur-base) var(--ease-out);
+  transition: transform var(--dur-base) var(--ease-out);
 }
-.workflow__node:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
+.workflow__node.border-glow-card { border-color: var(--border); }
+.workflow__node.border-glow-card:hover { transform: translate3d(0, -3px, 0.01px); }
 
 .workflow__icon {
   width: 40px;
@@ -46,7 +43,7 @@
 
 .workflow__connector { display: flex; align-items: center; color: var(--border-dark); flex-shrink: 0; opacity: 0.6; }
 
-.workflow--dark .workflow__node { background: rgba(255,255,255,0.05); border-color: rgba(255,255,255,0.12); }
+.workflow--dark .workflow__node.border-glow-card { border-color: rgba(255,255,255,0.12); }
 .workflow--dark .workflow__icon { background: rgba(255,255,255,0.1); color: var(--brand-accent-light); }
 .workflow--dark .workflow__label { color: #fff; }
 .workflow--dark .workflow__copy { color: var(--text-on-dark-muted); }
