@@ -1,12 +1,13 @@
 import { Link } from 'react-router-dom';
 import Icon from '../Icon/Icon';
+import { handleSpotlight } from '../../lib/spotlight';
 import './IndustryCard.css';
 
 const ICONS = { roofing: 'roof', franchise: 'network', 'mystery-shopping': 'target' };
 
 export default function IndustryCard({ industry }) {
   return (
-    <Link to={industry.to} className="industry-card card">
+    <Link to={industry.to} className="industry-card card spotlight" onMouseMove={handleSpotlight}>
       <div className="industry-card__visual" aria-hidden="true">
         <Icon name={ICONS[industry.key] || 'layers'} size={30} />
       </div>
