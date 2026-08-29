@@ -118,7 +118,13 @@
 /* Mobile nav panel */
 .mobile-nav {
   position: fixed;
-  inset: var(--header-height) 0 0 0;
+  top: var(--header-height);
+  left: 0;
+  right: 0;
+  /* .header's backdrop-filter makes it a containing block for this fixed
+     element, so `bottom: 0` would resolve against the header's own height
+     instead of the viewport. Use an explicit viewport-relative height instead. */
+  height: calc(100vh - var(--header-height));
   background: var(--surface);
   transform: translateX(100%);
   transition: transform var(--dur-base) var(--ease-out);

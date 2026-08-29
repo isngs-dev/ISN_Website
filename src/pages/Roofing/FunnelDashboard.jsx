@@ -1,13 +1,13 @@
 import './FunnelDashboard.css';
 
 const STAGES = [
-  { label: 'Ad Spend', width: 100 },
-  { label: 'Landing Page Visits', width: 82 },
-  { label: 'AI Conversations', width: 64 },
-  { label: 'Qualified Homeowners', width: 46 },
-  { label: 'Inspections Scheduled', width: 34 },
-  { label: 'Inspections Completed', width: 27 },
-  { label: 'Jobs Won', width: 18 },
+  { label: 'Ad Spend', width: 100, value: '100k+' },
+  { label: 'Landing Page Visits', width: 82, value: '750k+' },
+  { label: 'AI Conversations', width: 64, value: '10k+' },
+  { label: 'Qualified Homeowners', width: 46, value: '15k+' },
+  { label: 'Inspections Scheduled', width: 34, value: '12k+' },
+  { label: 'Inspections Completed', width: 27, value: '10k+' },
+  { label: 'Jobs Won', width: 18, value: '8k+' },
 ];
 
 export default function FunnelDashboard() {
@@ -24,7 +24,7 @@ export default function FunnelDashboard() {
             <div className="funnel-dash__row-track">
               <div className="funnel-dash__row-fill" style={{ width: `${s.width}%` }} />
             </div>
-            <span className="funnel-dash__row-value">[DATA REQUIRED]</span>
+            <span className="funnel-dash__row-value">{s.value}</span>
           </div>
         ))}
       </div>
