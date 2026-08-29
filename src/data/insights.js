@@ -16,7 +16,7 @@ export const INSIGHTS = [
 
   { key: 'franchise-digital-marketing', category: 'Franchise Growth', title: 'Digital Marketing for Franchise Development', excerpt: 'Building a consistent pipeline of qualified franchise prospects.' },
   { key: 'qualify-franchise-leads', category: 'Franchise Growth', title: 'How to Qualify Franchise Leads', excerpt: 'The indicators that separate serious prospects from window shoppers.' },
-  { key: 'franchise-landing-pages', category: 'Franchise Growth', title: 'Building Better Franchise Recruitment Landing Pages', excerpt: 'Why sending prospects to a corporate homepage costs you conversions.' },
+  { key: 'franchise-landing-pages', category: 'Franchise Growth', title: 'Building Better Franchise Recruitment Landing Pages', excerpt: 'How a corporate webpage can reduce prospect conversions' },
 
   { key: 'scaling-ms-editing', category: 'Mystery Shopping', title: 'Scaling Mystery Shopping Editing', excerpt: 'How MS companies extend editorial capacity without losing quality.' },
   { key: 'recruiting-hard-markets', category: 'Mystery Shopping', title: 'Recruiting Mystery Shoppers in Demand Markets', excerpt: 'A practical approach to closing shopper coverage gaps.' },
