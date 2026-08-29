@@ -31,7 +31,7 @@ export default function CTA({
             <Button to={secondaryTo} variant="on-dark">{secondaryLabel}</Button>
           )}
           {showAI && (
-            <Button variant="on-dark" onClick={() => openChat(source)}>Talk to iSN AI</Button>
+            <Button variant="on-dark" onClick={() => openChat(source)}>Talk to Rebecca</Button>
           )}
         </div>
       </div>

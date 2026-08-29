@@ -206,7 +206,7 @@ export default function Home() {
               <Button to="/contact" variant="primary" onClick={() => trackStrategyCallCTA({ source: 'home_final_cta' })}>
                 Book a Strategy Call
               </Button>
-              <Button variant="on-dark" onClick={() => openChat('home_final_cta')}>Talk to iSN AI</Button>
+              <Button variant="on-dark" onClick={() => openChat('home_final_cta')}>Talk to Rebecca</Button>
             </div>
           </div>
           <div className="final-cta__previews">

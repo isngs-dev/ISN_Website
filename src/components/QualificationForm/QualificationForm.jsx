@@ -5,7 +5,7 @@ import { submitContact } from '../../lib/api';
 import { trackContactStarted, trackContactCompleted } from '../../lib/analytics';
 import './QualificationForm.css';
 
-const TYPE_OPTIONS = ['Roofing Company', 'Franchise Brand', 'Mystery Shopping Company', 'Other'];
+const TYPE_OPTIONS = ['Roofing Company', 'Franchise Brand', 'Mystery Shopping Company', 'AI Products Company', 'Other Business'];
 const GOAL_OPTIONS = [
   'Generate Leads',
   'Book Roofing Inspections',

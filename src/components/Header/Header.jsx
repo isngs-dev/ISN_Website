@@ -1,6 +1,11 @@
 import { useEffect, useRef, useState } from 'react';
-import { Link, NavLink } from 'react-router-dom';
+import { Link, NavLink, useLocation } from 'react-router-dom';
 import { NAV } from '../../data/navigation';
+
+function isDropdownActive(item, pathname) {
+  const paths = [item.to, ...item.columns.flatMap((col) => col.items.map((sub) => sub.to))];
+  return paths.some((p) => p.split('#')[0] === pathname);
+}
 import Button from '../Button/Button';
 import Icon from '../Icon/Icon';
 import { useUI } from '../../context/UIContext';
@@ -13,6 +18,7 @@ export default function Header() {
   const [openMenu, setOpenMenu] = useState(null);
   const { openChat, mobileNavOpen, setMobileNavOpen } = useUI();
   const headerRef = useRef(null);
+  const location = useLocation();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 8);
@@ -57,7 +63,7 @@ export default function Header() {
               {item.columns ? (
                 <button
                   type="button"
-                  className="header__nav-link"
+                  className={`header__nav-link ${isDropdownActive(item, location.pathname) ? 'is-active' : ''}`}
                   aria-expanded={openMenu === item.label}
                   onClick={() => setOpenMenu(openMenu === item.label ? null : item.label)}
                 >
@@ -72,7 +78,7 @@ export default function Header() {
 
               {item.columns && (
                 <div className={`mega-menu ${openMenu === item.label ? 'mega-menu--open' : ''}`}>
-                  <div className="mega-menu__grid">
+                  <div className="mega-menu__grid" style={{ gridTemplateColumns: `repeat(${item.columns.length}, 1fr)` }}>
                     {item.columns.map((col) => (
                       <div key={col.heading} className="mega-menu__col">
                         <p className="mega-menu__heading">{col.heading}</p>
@@ -93,7 +99,7 @@ export default function Header() {
 
         <div className="header__actions">
           <button type="button" className="header__ai-link" onClick={() => openChat('header')}>
-            <Icon name="bot" size={17} /> Talk to iSN AI
+            <Icon name="bot" size={17} /> Talk to Rebecca
           </button>
           <Button to="/contact" variant="primary" size="sm" onClick={() => trackStrategyCallCTA({ source: 'header' })}>
             Book a Strategy Call
@@ -123,7 +129,7 @@ export default function Header() {
             className="btn--block"
             onClick={() => { setMobileNavOpen(false); openChat('mobile_nav'); }}
           >
-            <Icon name="bot" size={17} /> Talk to iSN AI
+            <Icon name="bot" size={17} /> Talk to Rebecca
           </Button>
           <Button
             to="/contact"

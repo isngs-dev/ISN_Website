@@ -35,7 +35,7 @@ export default function Contact() {
             <button type="button" className="card contact-option" onClick={() => openChat('contact_page')}>
               <div className="contact-option__icon"><Icon name="chat" size={20} /></div>
               <div>
-                <h3 className="h4">Talk to iSN AI</h3>
+                <h3 className="h4">Talk to Rebecca</h3>
                 <p className="text-muted body-sm">Get instant answers and get qualified in minutes.</p>
               </div>
             </button>

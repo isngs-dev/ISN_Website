@@ -89,10 +89,10 @@ export default function AIChat() {
         type="button"
         className="ai-launcher"
         onClick={() => openChat('floating_launcher')}
-        aria-label="Talk to iSN AI"
+        aria-label="Talk to Rebecca"
       >
         <Icon name="bot" size={22} />
-        <span>Talk to iSN AI</span>
+        <span>Talk to Rebecca</span>
       </button>
 
       {chatOpen && (

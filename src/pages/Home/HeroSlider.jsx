@@ -34,7 +34,7 @@ export default function HeroSlider({ slides, index, slide, goTo, pause, resume }
       </div>
 
       <button type="button" className="home-hero__tertiary" onClick={() => openChat('home_hero')}>
-        <Icon name="bot" size={16} /> Talk to iSN AI
+        <Icon name="bot" size={16} /> Talk to Rebecca
       </button>
 
       <div className="hero-slider__nav" role="tablist" aria-label="Choose a service to highlight">

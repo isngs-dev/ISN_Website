@@ -13,7 +13,7 @@ export default function MiniFlow({ steps, label = 'Product illustration' }) {
         {steps.map((s, i) => (
           <div className="mini-flow__step" key={s.label}>
             <div className="mini-flow__node">
-              <div className="mini-flow__icon"><Icon name={s.icon} size={18} /></div>
+              <div className="mini-flow__icon"><Icon name={s.icon} size={20} /></div>
               <span>{s.label}</span>
             </div>
             {i < steps.length - 1 && <div className="mini-flow__connector" />}
