@@ -58,8 +58,8 @@ export const FLOWS = {
       { q: 'Roughly how many shoppers do you need?', options: ['Under 50', '50–200', '200+'] },
     ],
     solution: {
-      text: 'Shopper Recruitment AI can identify, match and engage shoppers in your gap markets through automated sourcing and outreach.',
-      cta: 'See Shopper Recruitment AI',
+      text: 'ShopperMatch.AI can identify, match and engage shoppers in your gap markets through automated sourcing and outreach.',
+      cta: 'See ShopperMatch.AI',
       to: '/ai-products/shopper-recruitment',
     },
   },

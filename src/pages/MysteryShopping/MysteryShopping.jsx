@@ -37,7 +37,7 @@ const PILLARS = [
     key: 'recruitment',
     headline: 'Shopper Recruitment',
     copy: 'Digital acquisition plus AI-powered matching and outreach.',
-    cta: 'Explore Shopper Recruitment AI',
+    cta: 'Explore ShopperMatch.AI',
     to: '/ai-products/shopper-recruitment',
     visual: 'map',
   },

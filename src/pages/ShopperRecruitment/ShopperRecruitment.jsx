@@ -20,24 +20,24 @@ export default function ShopperRecruitment() {
   return (
     <>
       <SEO
-        title="Shopper Recruitment AI | Mystery Shopper Sourcing"
+        title="ShopperMatch.AI | Mystery Shopper Sourcing"
         description="A purpose-built recruitment platform for Mystery Shopping companies to identify shopper gaps, source prospects, match candidates to requirements and automate engagement and onboarding workflows."
         path="/ai-products/shopper-recruitment"
         jsonLd={[
-          serviceSchema({ name: 'Shopper Recruitment AI', description: 'AI-powered sourcing, matching and outreach for Mystery Shopping shopper recruitment.' }),
-          breadcrumbSchema([{ name: 'Home', path: '/' }, { name: 'AI Products', path: '/ai-products' }, { name: 'Shopper Recruitment AI', path: '/ai-products/shopper-recruitment' }]),
+          serviceSchema({ name: 'ShopperMatch.AI', description: 'AI-powered sourcing, matching and outreach for Mystery Shopping shopper recruitment.' }),
+          breadcrumbSchema([{ name: 'Home', path: '/' }, { name: 'AI Products', path: '/ai-products' }, { name: 'ShopperMatch.AI', path: '/ai-products/shopper-recruitment' }]),
         ]}
       />
 
       <section className="section--dark" style={{ paddingBlock: 'var(--space-9) var(--space-8)' }}>
         <div className="container" style={{ maxWidth: 760, textAlign: 'center' }}>
-          <p className="eyebrow eyebrow--on-dark" style={{ justifyContent: 'center' }}>AI Products — Shopper Recruitment AI</p>
+          <p className="eyebrow eyebrow--on-dark" style={{ justifyContent: 'center' }}>AI Products — ShopperMatch.AI</p>
           <h1>Find the Right Shoppers Where Your Programs Need Them.</h1>
           <p className="body-lg" style={{ color: 'var(--text-on-dark-muted)', marginTop: 'var(--space-5)' }}>
             A purpose-built recruitment platform for Mystery Shopping companies to identify shopper gaps, source prospects, match candidates to requirements and automate engagement and onboarding workflows.
           </p>
           <div style={{ marginTop: 'var(--space-6)' }}>
-            <Button to="/contact" variant="primary" onClick={() => trackStrategyCallCTA({ source: 'shopper_recruitment_hero' })}>See Shopper Recruitment AI</Button>
+            <Button to="/contact" variant="primary" onClick={() => trackStrategyCallCTA({ source: 'shopper_recruitment_hero' })}>See ShopperMatch.AI</Button>
           </div>
         </div>
       </section>

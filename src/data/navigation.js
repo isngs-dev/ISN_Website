@@ -43,7 +43,7 @@ export const NAV = [
         items: [
           { label: 'AI Sales Assistant', to: '/ai-products/sales-assistant', description: 'A configurable assistant that qualifies prospects.' },
           { label: 'AI Sales Engine', to: '/ai-products/sales-engine', description: 'Acquisition to CRM, connected end to end.' },
-          { label: 'Shopper Recruitment AI', to: '/ai-products/shopper-recruitment', description: 'Find and engage shoppers for hard markets.' },
+          { label: 'ShopperMatch.AI', to: '/ai-products/shopper-recruitment', description: 'Find and engage shoppers for hard markets.' },
           { label: 'MS Intelligence Dashboard', to: '/ai-products/ms-intelligence-dashboard', description: 'Live analytics connected to SASSIE / Shopmetrics.' },
         ],
       },
@@ -76,7 +76,7 @@ export const FOOTER_NAV = [
     items: [
       { label: 'AI Sales Assistant', to: '/ai-products/sales-assistant' },
       { label: 'AI Sales Engine', to: '/ai-products/sales-engine' },
-      { label: 'Shopper Recruitment AI', to: '/ai-products/shopper-recruitment' },
+      { label: 'ShopperMatch.AI', to: '/ai-products/shopper-recruitment' },
       { label: 'MS Intelligence Dashboard', to: '/ai-products/ms-intelligence-dashboard' },
     ],
   },

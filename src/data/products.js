@@ -21,10 +21,10 @@ export const PRODUCTS = [
   },
   {
     key: 'shopper-recruitment',
-    name: 'Shopper Recruitment AI',
-    headline: 'Shopper Recruitment AI',
+    name: 'ShopperMatch.AI',
+    headline: 'ShopperMatch.AI',
     copy: 'Identify, match, engage and recruit Mystery Shoppers for difficult markets.',
-    cta: 'Explore Shopper Recruitment AI',
+    cta: 'Explore ShopperMatch.AI',
     to: '/ai-products/shopper-recruitment',
     visual: 'map',
   },
