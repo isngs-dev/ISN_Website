@@ -1,4 +1,4 @@
-.mini-flow { margin-top: -28px; }
+.mini-flow { margin-top: -48px; }
 .mini-flow__label { font-size: var(--fs-small); color: var(--text-on-dark-muted); margin-bottom: var(--space-4); text-align: right; }
 .mini-flow__list { display: flex; flex-direction: column; }
 .mini-flow__node {
