@@ -11,11 +11,11 @@ export const NAV = [
         heading: 'Solutions',
         items: [
           { label: 'iSN Growth Engine', to: '/solutions#growth-engine', description: 'Attract, convert, qualify, schedule, sync.' },
-          { label: 'Digital Growth', to: '/solutions#digital-growth', description: 'Acquisition campaigns that fuel the engine.' },
+          { label: 'Digital Growth', to: '/solutions/digital-growth', description: 'Acquisition campaigns that fuel the engine.' },
           { label: 'AI Sales Automation', to: '/ai-products', description: 'AI that engages, qualifies, and routes leads.' },
-          { label: 'Conversion Landing Pages', to: '/solutions#landing-pages', description: 'Purpose-built pages for every campaign.' },
-          { label: 'CRM & Calendar Automation', to: '/solutions#crm-automation', description: 'Sync qualified opportunities automatically.' },
-          { label: 'Custom AI & Automation', to: '/solutions#custom-ai', description: 'Workflow automation built around your business.' },
+          { label: 'Conversion Landing Pages', to: '/solutions/landing-pages', description: 'Purpose-built pages for every campaign.' },
+          { label: 'CRM & Calendar Automation', to: '/solutions/crm-automation', description: 'Sync qualified opportunities automatically.' },
+          { label: 'Custom AI & Automation', to: '/solutions/custom-ai', description: 'Workflow automation built around your business.' },
         ],
       },
     ],
@@ -57,10 +57,10 @@ export const FOOTER_NAV = [
   {
     heading: 'Solutions',
     items: [
-      { label: 'Digital Growth', to: '/solutions#digital-growth' },
+      { label: 'Digital Growth', to: '/solutions/digital-growth' },
       { label: 'Growth Engine', to: '/solutions#growth-engine' },
       { label: 'AI Automation', to: '/ai-products' },
-      { label: 'CRM Automation', to: '/solutions#crm-automation' },
+      { label: 'CRM Automation', to: '/solutions/crm-automation' },
     ],
   },
   {

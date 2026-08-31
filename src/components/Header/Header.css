@@ -64,6 +64,8 @@
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-lg);
   padding: var(--space-5);
+  max-height: calc(100vh - var(--header-height) - var(--space-6));
+  overflow-y: auto;
   opacity: 0;
   visibility: hidden;
   transition: opacity var(--dur-fast) var(--ease-out), transform var(--dur-fast) var(--ease-out), visibility var(--dur-fast);

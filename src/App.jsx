@@ -5,6 +5,10 @@ import Layout from './layouts/Layout';
 
 import Home from './pages/Home/Home';
 import Solutions from './pages/Solutions/Solutions';
+import DigitalGrowth from './pages/DigitalGrowth/DigitalGrowth';
+import ConversionLandingPages from './pages/ConversionLandingPages/ConversionLandingPages';
+import CRMAutomation from './pages/CRMAutomation/CRMAutomation';
+import CustomAIAutomation from './pages/CustomAIAutomation/CustomAIAutomation';
 import Roofing from './pages/Roofing/Roofing';
 import Franchise from './pages/Franchise/Franchise';
 import MysteryShopping from './pages/MysteryShopping/MysteryShopping';
@@ -30,6 +34,10 @@ function App() {
           <Route element={<Layout />}>
             <Route path="/" element={<Home />} />
             <Route path="/solutions" element={<Solutions />} />
+            <Route path="/solutions/digital-growth" element={<DigitalGrowth />} />
+            <Route path="/solutions/landing-pages" element={<ConversionLandingPages />} />
+            <Route path="/solutions/crm-automation" element={<CRMAutomation />} />
+            <Route path="/solutions/custom-ai" element={<CustomAIAutomation />} />
             <Route path="/industries/roofing" element={<Roofing />} />
             <Route path="/industries/franchise-growth" element={<Franchise />} />
             <Route path="/industries/mystery-shopping" element={<MysteryShopping />} />
