@@ -4,11 +4,13 @@ import { breadcrumbSchema } from '../../components/SEO/schema';
 import Icon from '../../components/Icon/Icon';
 import CTA from '../../components/CTA/CTA';
 import Reveal from '../../components/Reveal/Reveal';
+import ArticleModal from '../../components/ArticleModal/ArticleModal';
 import { INSIGHTS, INSIGHTS_CATEGORIES } from '../../data/insights';
 import './Insights.css';
 
 export default function Insights() {
   const [category, setCategory] = useState('All');
+  const [openArticle, setOpenArticle] = useState(null);
   const filtered = category === 'All' ? INSIGHTS : INSIGHTS.filter((i) => i.category === category);
 
   return (
@@ -49,12 +51,20 @@ export default function Insights() {
                 <p className="badge">{post.category}</p>
                 <h3 className="h4">{post.title}</h3>
                 <p className="text-muted body-sm">{post.excerpt}</p>
-                <span className="link-arrow insight-card__soon">Full Article Coming Soon <Icon name="arrow" size={14} /></span>
+                {post.body ? (
+                  <button type="button" className="link-arrow insight-card__read" onClick={() => setOpenArticle(post)}>
+                    Read Full Article <Icon name="arrow" size={14} />
+                  </button>
+                ) : (
+                  <span className="link-arrow insight-card__soon">Full Article Coming Soon <Icon name="arrow" size={14} /></span>
+                )}
               </div>
             ))}
           </Reveal>
         </div>
       </section>
+
+      <ArticleModal article={openArticle} onClose={() => setOpenArticle(null)} />
 
       <CTA eyebrow="Get Started" title="Ready to Put These Ideas to Work?" primaryLabel="Book a Strategy Call" source="insights_final_cta" showAI />
     </>
