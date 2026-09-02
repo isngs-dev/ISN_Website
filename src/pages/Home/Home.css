@@ -18,7 +18,6 @@
 .home-hero__tertiary:hover { color: #fff; }
 
 .trust-strip__line { text-align: center; color: var(--text-on-dark-muted); max-width: 640px; margin-inline: auto; margin-bottom: var(--space-6); }
-.trust-strip__logos { display: flex; justify-content: center; gap: var(--space-4); flex-wrap: wrap; margin-top: var(--space-6); }
 
 .section-cta { margin-top: var(--space-7); text-align: center; }
 

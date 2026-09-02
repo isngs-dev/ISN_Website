@@ -22,7 +22,7 @@ import { PRODUCTS } from '../../data/products';
 import { WHY_ISN } from '../../data/whyISN';
 import { CASE_STUDIES } from '../../data/caseStudies';
 import { TESTIMONIALS } from '../../data/testimonials';
-import { METRICS, CLIENT_LOGOS } from '../../data/company';
+import { METRICS } from '../../data/company';
 import { useUI } from '../../context/UIContext';
 import { trackStrategyCallCTA } from '../../lib/analytics';
 import './Home.css';
@@ -64,11 +64,6 @@ export default function Home() {
             Built on years of U.S. client delivery, deep Mystery Shopping expertise and a growing portfolio of AI-powered growth systems.
           </p>
           <Metrics metrics={METRICS} />
-          <div className="trust-strip__logos">
-            {CLIENT_LOGOS.map((c, i) => (
-              <span key={i} className="trust-strip__logo placeholder-tag">{c.name}</span>
-            ))}
-          </div>
         </Reveal>
       </section>
 

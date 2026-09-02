@@ -42,7 +42,6 @@ src/
 | Brand colors / spacing / type scale | `src/styles/tokens.css` |
 | Company address, phone, email | `src/data/company.js` |
 | Homepage metrics (trust strip) | `src/data/company.js` → `METRICS` |
-| Client logos | `src/data/company.js` → `CLIENT_LOGOS` |
 | Testimonials | `src/data/testimonials.js` |
 | Case studies | `src/data/caseStudies.js` |
 | Insights / resource articles | `src/data/insights.js` |
@@ -56,7 +55,6 @@ All of the following are wired with clean adapter seams but are **not**
 connected to live services. Search the codebase for the bracketed markers
 below before launch:
 
-- `[CLIENT LOGO REQUIRED]` — licensed client logo files
 - `[CASE STUDY DATA REQUIRED]` — verified outcome metrics per case study
 - `[TEAM IMAGE REQUIRED]` — real team/office photography
 - `[CRM ENDPOINT TO BE CONFIGURED]` — CRM webhook/API target

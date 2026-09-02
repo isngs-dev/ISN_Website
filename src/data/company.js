@@ -16,16 +16,7 @@ export const COMPANY = {
 // Metrics shown in the trust strip.
 export const METRICS = [
   { value: '20+', label: 'Years of Client Delivery' },
-  { value: '17+', label: 'U.S. Clients Supported' },
+  { value: '50+', label: 'U.S. Clients Supported' },
   { value: '100k+', label: 'Mystery Shops Processed' },
   { value: '30+', label: 'Growth Campaigns Run' },
-];
-
-// Client logos — replace with approved, licensed logo files before launch.
-export const CLIENT_LOGOS = [
-  { name: '[CLIENT LOGO REQUIRED]' },
-  { name: '[CLIENT LOGO REQUIRED]' },
-  { name: '[CLIENT LOGO REQUIRED]' },
-  { name: '[CLIENT LOGO REQUIRED]' },
-  { name: '[CLIENT LOGO REQUIRED]' },
 ];
