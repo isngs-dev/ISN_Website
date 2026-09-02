@@ -1,7 +1,13 @@
 .article-modal {
   max-width: 760px;
   max-height: 85vh;
+  padding: 0;
+  overflow: hidden;
+}
+.article-modal__scroll {
+  max-height: 85vh;
   overflow-y: auto;
+  padding: var(--space-7);
 }
 .article-modal__title { margin-top: var(--space-3); }
 .article-modal__body { margin-top: var(--space-5); display: flex; flex-direction: column; gap: var(--space-4); }
