@@ -1,3 +1,31 @@
 .insight-card { display: flex; flex-direction: column; align-items: flex-start; gap: var(--space-3); }
 .insight-card .badge { background: var(--surface-muted); color: var(--brand-primary); }
 .insight-card__read { background: none; border: none; padding: 0; font-size: inherit; }
+
+.featured-article {
+  display: block;
+  width: 100%;
+  text-align: left;
+  max-width: 720px;
+  margin-inline: auto;
+}
+.featured-article h2 { margin-top: var(--space-2); }
+.featured-article p { margin-top: var(--space-3); }
+.featured-article .link-arrow { margin-top: var(--space-4); }
+
+.newsletter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-6);
+  flex-wrap: wrap;
+}
+.newsletter--done { text-align: center; width: 100%; }
+.newsletter__field { display: flex; gap: var(--space-3); flex-wrap: wrap; }
+.newsletter__field input {
+  min-width: 260px;
+  padding: 0.85em 1.2em;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--border);
+  font: inherit;
+}

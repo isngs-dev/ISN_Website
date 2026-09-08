@@ -55,16 +55,6 @@ export default function CRMAutomation() {
         visual={<MiniFlow steps={HERO_FLOW} />}
       />
 
-      <section className="section section--off">
-        <div className="container">
-          <Reveal className="section-head section-head--center">
-            <p className="eyebrow">The Homeowner Journey</p>
-            <h2>Marketing, Follow-Up and Scheduling in One Streamlined Process.</h2>
-          </Reveal>
-          <Workflow stages={JOURNEY_STAGES} />
-        </div>
-      </section>
-
       <section className="section">
         <div className="container">
           <Reveal className="section-head section-head--center">
@@ -83,6 +73,16 @@ export default function CRMAutomation() {
               </div>
             ))}
           </Reveal>
+        </div>
+      </section>
+
+      <section className="section section--off">
+        <div className="container">
+          <Reveal className="section-head section-head--center">
+            <p className="eyebrow">The Homeowner Journey</p>
+            <h2>Marketing, Follow-Up and Scheduling in One Streamlined Process.</h2>
+          </Reveal>
+          <Workflow stages={JOURNEY_STAGES} />
         </div>
       </section>
 

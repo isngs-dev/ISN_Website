@@ -58,9 +58,23 @@ export default function Contact() {
                   <Icon name="phone" size={16} /> {p.number} <span className="text-muted body-sm">({p.label})</span>
                 </a>
               ))}
-              <p className="contact-details__row">
+              <a
+                href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(COMPANY.address)}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="contact-details__row"
+              >
                 <Icon name="pin" size={16} /> {COMPANY.address}
-              </p>
+              </a>
+            </div>
+
+            <div className="card contact-map">
+              <iframe
+                title="iSN office location"
+                src={`https://www.google.com/maps?q=${encodeURIComponent(COMPANY.address)}&output=embed`}
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
             </div>
           </div>
         </div>

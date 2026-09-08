@@ -93,3 +93,5 @@
 @media (max-width: 640px) {
   .hero-visual__card-meta { max-width: 160px; }
 }
+
+.hero-visual__caption { font-size: var(--fs-small); color: var(--text-on-dark-muted); margin-top: var(--space-4); text-align: right; }

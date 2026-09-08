@@ -61,15 +61,15 @@ export default function CustomAIAutomation() {
 
       <section className="section">
         <div className="container">
-          <Reveal className="section-head section-head--center">
-            <p className="eyebrow">Your AI Works While Your Team Works</p>
-            <h2>A Homeowner May Submit an Inquiry at 10 PM. AI Can Step In Immediately.</h2>
+          <Reveal className="section-head">
+            <p className="eyebrow">Built Around Your Roofing Business</p>
+            <h2>An Extension of Your Team, Not Another Tool to Learn.</h2>
             <p className="body-lg text-muted">
-              The goal is not to replace your team — it's to give your team a system that never gets tired, never forgets a follow-up, and never loses track of an opportunity.
+              Every roofing company operates differently. Your AI solution can be built around your services, service areas, sales process, qualification questions and scheduling requirements — so the system works as an extension of your team rather than another tool your team has to learn.
             </p>
           </Reveal>
-          <Reveal group className="grid grid-4">
-            {CAPABILITIES.map((c) => (
+          <Reveal group className="grid grid-2">
+            {CASES.map((c) => (
               <div className="card" key={c.title}>
                 <div className="outcome-card__icon"><Icon name={c.icon} size={22} /></div>
                 <h3 className="h4">{c.title}</h3>
@@ -82,15 +82,15 @@ export default function CustomAIAutomation() {
 
       <section className="section section--off">
         <div className="container">
-          <Reveal className="section-head">
-            <p className="eyebrow">Built Around Your Roofing Business</p>
-            <h2>An Extension of Your Team, Not Another Tool to Learn.</h2>
+          <Reveal className="section-head section-head--center">
+            <p className="eyebrow">Your AI Works While Your Team Works</p>
+            <h2>A Homeowner May Submit an Inquiry at 10 PM. AI Can Step In Immediately.</h2>
             <p className="body-lg text-muted">
-              Every roofing company operates differently. Your AI solution can be built around your services, service areas, sales process, qualification questions and scheduling requirements — so the system works as an extension of your team rather than another tool your team has to learn.
+              The goal is not to replace your team — it's to give your team a system that never gets tired, never forgets a follow-up, and never loses track of an opportunity.
             </p>
           </Reveal>
-          <Reveal group className="grid grid-2">
-            {CASES.map((c) => (
+          <Reveal group className="grid grid-4">
+            {CAPABILITIES.map((c) => (
               <div className="card" key={c.title}>
                 <div className="outcome-card__icon"><Icon name={c.icon} size={22} /></div>
                 <h3 className="h4">{c.title}</h3>

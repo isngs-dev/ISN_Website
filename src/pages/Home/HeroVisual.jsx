@@ -19,6 +19,7 @@ export default function HeroVisual({ slide }) {
           </div>
         ))}
       </div>
+      <p className="hero-visual__caption">Status tags show where each opportunity sits right now — from first touch to CRM sync.</p>
     </div>
   );
 }

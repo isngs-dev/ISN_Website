@@ -51,15 +51,6 @@ export default function About() {
         </div>
       </section>
 
-      <section className="section section--off">
-        <div className="container">
-          <Reveal className="about-team-placeholder card">
-            <p className="placeholder-tag">[TEAM IMAGE REQUIRED]</p>
-            <p className="text-muted body-sm">Real iSN team and office photography will be added here.</p>
-          </Reveal>
-        </div>
-      </section>
-
       <section className="section">
         <div className="container">
           <Reveal className="section-head section-head--center">

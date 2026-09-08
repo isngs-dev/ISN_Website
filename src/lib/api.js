@@ -4,10 +4,11 @@
 // clean seam: swap the mock implementation for a real `fetch()` call once the
 // corresponding endpoint is available, without changing any calling code.
 //
-//   POST /api/leads   — general lead capture (outcome selector, industry CTAs)
-//   POST /api/contact — Contact page qualification form
-//   POST /api/chat    — Talk to iSN AI assistant
-//   POST /api/book    — Calendar booking modal
+//   POST /api/leads      — general lead capture (outcome selector, industry CTAs)
+//   POST /api/contact    — Contact page qualification form
+//   POST /api/chat       — Talk to iSN AI assistant
+//   POST /api/book       — Calendar booking modal
+//   POST /api/newsletter — Insights page newsletter signup
 //
 // CRM_ENDPOINT / CALENDAR_PROVIDER are read from environment variables so
 // they can be configured per-deployment. See .env.example.
@@ -16,6 +17,7 @@ const LEADS_ENDPOINT = import.meta.env.VITE_LEADS_API_URL || '/api/leads';
 const CONTACT_ENDPOINT = import.meta.env.VITE_CONTACT_API_URL || '/api/contact';
 const CHAT_ENDPOINT = import.meta.env.VITE_CHAT_API_URL || '/api/chat';
 const BOOK_ENDPOINT = import.meta.env.VITE_BOOK_API_URL || '/api/book';
+const NEWSLETTER_ENDPOINT = import.meta.env.VITE_NEWSLETTER_API_URL || '/api/newsletter';
 
 const MOCK_LATENCY_MS = 500;
 
@@ -52,6 +54,10 @@ export function sendChatMessage(payload) {
 
 export function submitBooking(payload) {
   return mockRequest(BOOK_ENDPOINT, payload);
+}
+
+export function submitNewsletter(payload) {
+  return mockRequest(NEWSLETTER_ENDPOINT, payload);
 }
 
 // CRM adapter — configure via VITE_CRM_PROVIDER (hubspot | salesforce |

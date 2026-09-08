@@ -5,16 +5,17 @@ import CTA from '../../components/CTA/CTA';
 import Icon from '../../components/Icon/Icon';
 import Reveal from '../../components/Reveal/Reveal';
 import RevealText from '../../components/Reveal/RevealText';
+import { Link } from 'react-router-dom';
 import { GROWTH_ENGINE_STAGES } from '../../data/growthEngine';
 import './Solutions.css';
 
 const SOLUTIONS = [
-  { id: 'digital-growth', icon: 'attract', title: 'Digital Acquisition', copy: 'Google and Meta campaigns built around real buyer intent in your service area.' },
-  { id: 'landing-pages', icon: 'convert', title: 'Conversion Landing Pages', copy: 'High-conversion pages purpose-built for each campaign and audience.' },
-  { id: 'ai-engagement', icon: 'chat', title: 'AI Prospect Engagement', copy: 'Conversational AI that answers questions and qualifies interest in real time.' },
-  { id: 'crm-automation', icon: 'sync', title: 'CRM & Calendar Automation', copy: 'Qualified opportunities sync automatically into your CRM and calendar.' },
-  { id: 'analytics', icon: 'bar', title: 'Industry Analytics', copy: 'Full-funnel reporting from first click through to business outcome.' },
-  { id: 'custom-ai', icon: 'ai', title: 'Custom AI & Automation', copy: 'Configurable AI assistants and workflow automation built around your business.' },
+  { id: 'digital-growth', to: '/solutions/digital-growth', icon: 'attract', title: 'Digital Acquisition', copy: 'Google and Meta campaigns built around real buyer intent in your service area.' },
+  { id: 'landing-pages', to: '/solutions/landing-pages', icon: 'convert', title: 'Conversion Landing Pages', copy: 'High-conversion pages purpose-built for each campaign and audience.' },
+  { id: 'ai-engagement', to: '/ai-products/sales-assistant', icon: 'chat', title: 'AI Prospect Engagement', copy: 'Conversational AI that answers questions and qualifies interest in real time.' },
+  { id: 'crm-automation', to: '/solutions/crm-automation', icon: 'sync', title: 'CRM & Calendar Automation', copy: 'Qualified opportunities sync automatically into your CRM and calendar.' },
+  { id: 'analytics', to: '/ai-products/ms-intelligence-dashboard', icon: 'bar', title: 'Industry Analytics', copy: 'Full-funnel reporting from first click through to business outcome.' },
+  { id: 'custom-ai', to: '/solutions/custom-ai', icon: 'ai', title: 'Custom AI & Automation', copy: 'Configurable AI assistants and workflow automation built around your business.' },
 ];
 
 export default function Solutions() {
@@ -39,13 +40,19 @@ export default function Solutions() {
 
       <section className="section">
         <div className="container">
+          <Reveal className="section-head section-head--center">
+            <p className="eyebrow">Overview</p>
+            <h2>Six Capabilities. Use Them Individually, or Connect Them Into One Engine.</h2>
+            <p className="text-muted">Each capability below solves one part of the funnel on its own — click through for the detail, or see how they connect in the iSN Growth Engine below.</p>
+          </Reveal>
           <Reveal group className="grid grid-3">
             {SOLUTIONS.map((s) => (
-              <div className="card solution-card" id={s.id} key={s.id}>
+              <Link to={s.to} className="card solution-card" id={s.id} key={s.id}>
                 <div className="solution-card__icon"><Icon name={s.icon} size={22} /></div>
                 <h3 className="h4">{s.title}</h3>
                 <p className="text-muted body-sm">{s.copy}</p>
-              </div>
+                <span className="link-arrow solution-card__link">Learn more <Icon name="arrow" size={14} /></span>
+              </Link>
             ))}
           </Reveal>
         </div>

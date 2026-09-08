@@ -5,13 +5,17 @@ import Icon from '../../components/Icon/Icon';
 import CTA from '../../components/CTA/CTA';
 import Reveal from '../../components/Reveal/Reveal';
 import ArticleModal from '../../components/ArticleModal/ArticleModal';
+import NewsletterSignup from './NewsletterSignup';
 import { INSIGHTS, INSIGHTS_CATEGORIES } from '../../data/insights';
 import './Insights.css';
+
+const FEATURED = INSIGHTS.find((i) => i.body);
 
 export default function Insights() {
   const [category, setCategory] = useState('All');
   const [openArticle, setOpenArticle] = useState(null);
-  const filtered = category === 'All' ? INSIGHTS : INSIGHTS.filter((i) => i.category === category);
+  const filtered = (category === 'All' ? INSIGHTS : INSIGHTS.filter((i) => i.category === category))
+    .filter((i) => i.key !== FEATURED?.key);
 
   return (
     <>
@@ -28,6 +32,19 @@ export default function Insights() {
           <h1>Ideas Behind the Growth Engine.</h1>
         </div>
       </section>
+
+      {FEATURED && (
+        <section className="section section--tight">
+          <div className="container">
+            <button type="button" className="card featured-article" onClick={() => setOpenArticle(FEATURED)}>
+              <p className="eyebrow">Featured Article</p>
+              <h2 className="h3">{FEATURED.title}</h2>
+              <p className="text-muted body-lg">{FEATURED.excerpt}</p>
+              <span className="link-arrow">Read Full Article <Icon name="arrow" size={16} /></span>
+            </button>
+          </div>
+        </section>
+      )}
 
       <section className="section">
         <div className="container">
@@ -65,6 +82,12 @@ export default function Insights() {
       </section>
 
       <ArticleModal article={openArticle} onClose={() => setOpenArticle(null)} />
+
+      <section className="section section--off">
+        <div className="container">
+          <NewsletterSignup />
+        </div>
+      </section>
 
       <CTA eyebrow="Get Started" title="Ready to Put These Ideas to Work?" primaryLabel="Book a Strategy Call" source="insights_final_cta" showAI />
     </>

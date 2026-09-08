@@ -34,7 +34,7 @@ export default function DigitalGrowth() {
       />
 
       <PageHero
-        eyebrow="Solutions — Digital Growth"
+        eyebrow="Solutions — Digital Growth for Roofing"
         title="Turn Your Roofing Business Into a Lead-Generating Machine."
         subhead="More visibility. Better leads. More roofing opportunities. Homeowners are searching for roofing companies every day — the challenge is making sure they find your business when they're ready to take action."
         primaryLabel="Get Started"

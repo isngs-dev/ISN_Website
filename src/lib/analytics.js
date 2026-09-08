@@ -32,6 +32,7 @@ export const trackCalendarOpened = (payload) => pushEvent('calendar_opened', pay
 export const trackCalendarBooked = (payload) => pushEvent('calendar_booked', payload);
 export const trackCaseStudyView = (payload) => pushEvent('case_study_view', payload);
 export const trackHeroSliderCTA = (payload) => pushEvent('cta_hero_slider', payload);
+export const trackNewsletterSignup = (payload) => pushEvent('newsletter_signup', payload);
 
 export default {
   trackStrategyCallCTA,
@@ -46,4 +47,5 @@ export default {
   trackCalendarBooked,
   trackCaseStudyView,
   trackHeroSliderCTA,
+  trackNewsletterSignup,
 };

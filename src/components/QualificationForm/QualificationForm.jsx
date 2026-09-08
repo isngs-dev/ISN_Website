@@ -102,6 +102,9 @@ export default function QualificationForm() {
               </button>
             ))}
           </div>
+          <div className="qform__nav">
+            <button type="button" className="qform__back" onClick={back}>Back</button>
+          </div>
         </fieldset>
       )}
 
