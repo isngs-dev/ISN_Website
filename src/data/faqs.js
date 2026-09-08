@@ -20,7 +20,12 @@ export const FRANCHISE_FAQS = [
 ];
 
 export const MS_FAQS = [
-  { q: 'Does iSN understand Mystery Shopping program requirements?', a: 'Yes. iSN has supported Mystery Shopping editing and QA workflows for years and builds around program guidelines and turnaround commitments.' },
-  { q: 'Can the growth engine generate new client opportunities?', a: 'Yes. The MS Business Growth Engine is built specifically to generate qualified B2B opportunities for Mystery Shopping companies.' },
-  { q: 'Can the dashboard connect to our existing platform?', a: 'Yes. The MS Intelligence Dashboard connects to SASSIE or Shopmetrics through a data connector. [CRM ENDPOINT TO BE CONFIGURED]' },
+  { q: 'Do you support large-volume and multi-location mystery shopping programs?', a: 'Yes. We support programs ranging from individual locations to large-scale, multi-location assignments. Our operational processes are designed to manage volume while maintaining consistency and quality across locations.' },
+  { q: 'What industries and project types do you support?', a: 'We support mystery shopping and customer experience programs across industries such as retail, QSR, restaurants, convenience stores, automotive, hospitality, financial services, healthcare, and other customer-facing businesses.' },
+  { q: 'Can you work with an existing questionnaire or SOP?', a: 'Yes. We can work with an existing questionnaire, client SOP, scoring methodology, and reporting structure. We can also help optimize the process when required.' },
+  { q: 'How do you ensure shopper quality?', a: 'Shopper quality is managed through appropriate shopper selection, project-specific instructions, training, validation of submissions, and quality checks. Reports that do not meet defined requirements can be flagged for clarification or further review.' },
+  { q: 'How do you handle high-volume projects with tight TATs?', a: 'We use structured workflows, resource planning, quality-control processes, and centralized project monitoring to manage high-volume assignments and meet agreed turnaround times.' },
+  { q: 'What quality-control process do you follow?', a: "Quality checks can cover questionnaire compliance, response accuracy, grammar and clarity, supporting evidence, photographs, receipts, and adherence to project-specific instructions. The level of QC can be customized based on the client's requirements." },
+  { q: 'Can you handle image and receipt validation?', a: 'Yes. Supporting evidence such as photographs and receipts can be reviewed against the project requirements to ensure that submissions are complete and appropriate.' },
+  { q: 'Can you integrate with our existing mystery shopping platform?', a: 'We can work with commonly used mystery shopping platforms and client-specific workflows. The exact integration or operating model can be discussed based on the platform and project requirements.' },
 ];

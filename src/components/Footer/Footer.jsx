@@ -5,6 +5,14 @@ import Icon from '../Icon/Icon';
 import logo from '../../assets/brand/isn-logo.png';
 import './Footer.css';
 
+const SOCIAL_LINKS = [
+  { name: 'youtube', label: 'YouTube', href: 'https://www.youtube.com/@isnbusinesssolutions8698' },
+  { name: 'instagram', label: 'Instagram', href: 'https://www.instagram.com/_isngroup_/' },
+  { name: 'facebook', label: 'Facebook', href: 'https://www.facebook.com/isnbusinesssolutionsllp' },
+  { name: 'twitter', label: 'Twitter', href: 'https://x.com/isnbusiness' },
+  { name: 'linkedin', label: 'LinkedIn', href: 'https://www.linkedin.com/company/isnbusinesssolutionsllp/' },
+];
+
 export default function Footer() {
   const year = new Date().getFullYear();
   return (
@@ -17,6 +25,13 @@ export default function Footer() {
             <a href={`mailto:${COMPANY.email}`}><Icon name="mail" size={16} /> {COMPANY.email}</a>
             <a href={`tel:${COMPANY.phones[0].number.replace(/[^+\d]/g, '')}`}><Icon name="phone" size={16} /> {COMPANY.phones[0].number}</a>
             <span><Icon name="pin" size={16} /> {COMPANY.address}</span>
+          </div>
+          <div className="footer__social">
+            {SOCIAL_LINKS.map((s) => (
+              <a key={s.name} href={s.href} target="_blank" rel="noopener noreferrer" aria-label={s.label}>
+                <Icon name={s.name} size={18} />
+              </a>
+            ))}
           </div>
         </div>
 

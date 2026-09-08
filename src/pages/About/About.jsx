@@ -5,6 +5,8 @@ import Icon from '../../components/Icon/Icon';
 import Testimonial from '../../components/Testimonial/Testimonial';
 import Reveal from '../../components/Reveal/Reveal';
 import { TESTIMONIALS } from '../../data/testimonials';
+import { TEAM } from '../../data/team';
+import { GALLERY } from '../../data/gallery';
 import './About.css';
 
 
@@ -65,6 +67,42 @@ export default function About() {
             <div className="leader-card__photo">
               <img src="/images/Managing-Director-1.jpg" alt="Dinesh Dalamal, Managing Director of iSN Business Solutions" />
             </div>
+          </Reveal>
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="container">
+          <Reveal className="section-head section-head--center">
+            <p className="eyebrow">Our Team</p>
+            <h2>The People Behind the System.</h2>
+          </Reveal>
+          <Reveal group className="grid grid-4">
+            {TEAM.map((m) => (
+              <div className="team-card" key={m.name}>
+                <img src={m.photo} alt={m.name} className="team-card__photo" />
+                <h3 className="h4">{m.name}</h3>
+                <p className="text-muted body-sm">{m.title}</p>
+                <div className="team-card__links">
+                  <a href={`mailto:${m.email}`} aria-label={`Email ${m.name}`}><Icon name="mail" size={18} /></a>
+                  <a href={m.linkedin} target="_blank" rel="noopener noreferrer" aria-label={`${m.name} on LinkedIn`}><Icon name="linkedin" size={18} /></a>
+                </div>
+              </div>
+            ))}
+          </Reveal>
+        </div>
+      </section>
+
+      <section className="section section--off">
+        <div className="container">
+          <Reveal className="section-head section-head--center">
+            <p className="eyebrow">Gallery</p>
+            <h2>Life at iSN.</h2>
+          </Reveal>
+          <Reveal group className="about-gallery">
+            {GALLERY.map((src) => (
+              <img src={src} alt="iSN team and office" key={src} loading="lazy" />
+            ))}
           </Reveal>
         </div>
       </section>
