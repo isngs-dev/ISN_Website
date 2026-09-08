@@ -51,6 +51,24 @@ export default function About() {
         </div>
       </section>
 
+      <section className="section section--off">
+        <div className="container">
+          <Reveal group className="leader-card">
+            <div className="leader-card__info">
+              <div className="leader-card__avatar"><Icon name="user" size={40} /></div>
+              <h2 className="leader-card__name">Dinesh Dalamal</h2>
+              <p className="leader-card__title">Managing Director</p>
+              <p className="text-muted">
+                Incorporated in 2001, iSN began its journey specializing in information processing and data digitization, empowering companies to achieve their full potential. Over the past 23 years, we have evolved alongside the industry, continually enhancing our service offerings to support business growth. Our expertise spans market research, performance marketing, information processing, and comprehensive managed services. I firmly believe in fostering leadership and ingenuity among our employees. Our holistic approach ensures that we deliver exceptional results for our clients while building enduring relationships that stand the test of time.
+              </p>
+            </div>
+            <div className="leader-card__photo">
+              <img src="/images/Managing-Director-1.jpg" alt="Dinesh Dalamal, Managing Director of iSN Business Solutions" />
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
       <section className="section">
         <div className="container">
           <Reveal className="section-head section-head--center">

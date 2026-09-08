@@ -10,3 +10,19 @@
 .about-story__line { flex: 1; width: 2px; background: var(--border); margin-block: var(--space-2); min-height: 32px; }
 .about-story__row > div:last-child { padding-bottom: var(--space-7); }
 .about-story__row:last-child > div:last-child { padding-bottom: 0; }
+
+.leader-card { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-8); align-items: center; }
+.leader-card__avatar {
+  width: 96px; height: 96px; border-radius: 50%;
+  border: 2px solid var(--brand-primary); color: var(--brand-primary);
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: var(--space-5);
+}
+.leader-card__name { color: var(--brand-primary); }
+.leader-card__title { font-weight: 600; margin-top: var(--space-2); margin-bottom: var(--space-4); }
+.leader-card__photo img { width: 100%; border-radius: var(--radius-lg); box-shadow: var(--shadow-lg); }
+
+@media (max-width: 900px) {
+  .leader-card { grid-template-columns: 1fr; }
+  .leader-card__photo { order: -1; }
+}

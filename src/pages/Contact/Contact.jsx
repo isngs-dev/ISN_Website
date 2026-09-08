@@ -1,13 +1,20 @@
 import SEO from '../../components/SEO/SEO';
 import { breadcrumbSchema } from '../../components/SEO/schema';
 import Icon from '../../components/Icon/Icon';
-import QualificationForm from '../../components/QualificationForm/QualificationForm';
+import ContactForm from '../../components/ContactForm/ContactForm';
 import { COMPANY } from '../../data/company';
 import { useUI } from '../../context/UIContext';
+import { submitContact } from '../../lib/api';
+import { trackContactCompleted } from '../../lib/analytics';
 import './Contact.css';
 
 export default function Contact() {
   const { openCalendar, openChat } = useUI();
+
+  async function handleSubmit(data) {
+    await submitContact(data);
+    trackContactCompleted({ service: data.service });
+  }
 
   return (
     <>
@@ -27,8 +34,9 @@ export default function Contact() {
 
       <section className="section">
         <div className="container contact-grid">
-          <div className="contact-form-col">
-            <QualificationForm />
+          <div className="card contact-form-col">
+            <h2 className="h4">Tell Us About Your Business</h2>
+            <ContactForm submitLabel="Send Message" onSubmit={handleSubmit} />
           </div>
 
           <div className="contact-side-col">

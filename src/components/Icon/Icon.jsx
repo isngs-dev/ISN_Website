@@ -38,6 +38,7 @@ const PATHS = {
   megaphone: 'M3 11v2a1 1 0 0 0 1 1h2l5 4V6l-5 4H4a1 1 0 0 0-1 1Zm14-4a5 5 0 0 1 0 8m3-11a9 9 0 0 1 0 14',
   edit: 'M12 20h9M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5Z',
   bar: 'M4 20V10m6 10V4m6 16v-7m6 7V8',
+  user: 'M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8Zm-7 8a7 7 0 0 1 14 0',
 };
 
 export default function Icon({ name, size = 24, className, ...rest }) {

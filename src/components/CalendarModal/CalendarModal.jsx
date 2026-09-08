@@ -1,21 +1,13 @@
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { useUI } from '../../context/UIContext';
 import { submitBooking, CALENDAR_PROVIDER, CALENDAR_URL } from '../../lib/api';
 import { trackCalendarBooked } from '../../lib/analytics';
 import Icon from '../Icon/Icon';
-import Button from '../Button/Button';
+import ContactForm from '../ContactForm/ContactForm';
 import './CalendarModal.css';
-
-const SLOTS = ['Tue, 9:00 AM', 'Tue, 2:30 PM', 'Wed, 11:00 AM', 'Thu, 10:00 AM', 'Thu, 3:00 PM', 'Fri, 1:00 PM'];
 
 export default function CalendarModal() {
   const { calendarOpen, closeCalendar } = useUI();
-  const [slot, setSlot] = useState(null);
-  const [confirmed, setConfirmed] = useState(false);
-
-  useEffect(() => {
-    if (!calendarOpen) { setSlot(null); setConfirmed(false); }
-  }, [calendarOpen]);
 
   useEffect(() => {
     function onKey(e) { if (e.key === 'Escape') closeCalendar(); }
@@ -25,11 +17,9 @@ export default function CalendarModal() {
 
   if (!calendarOpen) return null;
 
-  async function confirmSlot(s) {
-    setSlot(s);
-    await submitBooking({ slot: s, provider: CALENDAR_PROVIDER });
-    trackCalendarBooked({ slot: s });
-    setConfirmed(true);
+  async function handleSubmit(data) {
+    await submitBooking({ ...data, provider: CALENDAR_PROVIDER });
+    trackCalendarBooked({ service: data.service });
   }
 
   return (
@@ -38,30 +28,11 @@ export default function CalendarModal() {
         <button type="button" className="modal__close" onClick={closeCalendar} aria-label="Close"><Icon name="close" size={18} /></button>
 
         {!CALENDAR_URL ? (
-          <>
-            <span className="badge">Illustrative interface</span>
+          <div className="calendar-modal__scroll">
             <h3 className="calendar-modal__title">Book a Strategy Call</h3>
-            <p className="text-muted">Pick a time that works. We'll confirm by email.</p>
-
-            {!confirmed ? (
-              <div className="calendar-modal__slots">
-                {SLOTS.map((s) => (
-                  <button key={s} type="button" className={s === slot ? 'is-selected' : ''} onClick={() => confirmSlot(s)}>
-                    <Icon name="calendar" size={16} /> {s}
-                  </button>
-                ))}
-              </div>
-            ) : (
-              <div className="calendar-modal__confirmed">
-                <Icon name="check" size={28} />
-                <p><strong>Confirmed for {slot}.</strong></p>
-                <p className="text-muted body-sm">A calendar invite and confirmation email will follow once this is connected to a live scheduling provider.</p>
-              </div>
-            )}
-            <p className="body-sm text-muted calendar-modal__note">
-              [CRM ENDPOINT TO BE CONFIGURED] — connect Calendly, Google Calendar, HubSpot Meetings or GoHighLevel here.
-            </p>
-          </>
+            <p className="text-muted">Tell us a bit about your business. We'll confirm a time by email.</p>
+            <ContactForm submitLabel="Book My Strategy Call" onSubmit={handleSubmit} />
+          </div>
         ) : (
           <iframe title="Book a strategy call" src={CALENDAR_URL} className="calendar-modal__iframe" />
         )}
