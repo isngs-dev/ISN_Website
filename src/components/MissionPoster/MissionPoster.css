@@ -1,0 +1,88 @@
+.mission-poster {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1080 / 1251;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  background-color: #ece1d3;
+  background-image: radial-gradient(rgba(0, 0, 0, 0.035) 1px, transparent 1px);
+  background-size: 3px 3px;
+  container-type: inline-size;
+}
+
+.mission-poster__dart {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 49.07%;
+  height: 43.96%;
+  overflow: hidden;
+}
+.mission-poster__dart img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 54% 46%;
+}
+
+.mission-poster__logo {
+  position: absolute;
+  left: 10.5%;
+  top: 6%;
+  width: 17.5%;
+  height: auto;
+}
+
+.mission-poster__headline {
+  position: absolute;
+  left: 10%;
+  top: 21.5%;
+  margin: 0;
+  font-family: 'Anton', sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #111;
+  font-size: 11.4cqw;
+  line-height: 0.98;
+}
+
+.mission-poster__badge {
+  position: absolute;
+  left: 10.7%;
+  top: 61.5%;
+  width: 45.5%;
+  margin: 0;
+  padding: 3% 0 3% 2%;
+  background: var(--brand-accent);
+  color: #fff;
+  text-align: left;
+  border-radius: 10%;
+  font-family: 'Anton', sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  text-transform: uppercase;
+  font-size: 9.4cqw;
+  line-height: 1;
+}
+
+.mission-poster__social {
+  position: absolute;
+  left: 10%;
+  bottom: 5.5%;
+  display: flex;
+  gap: 3cqw;
+}
+.mission-poster__social a {
+  width: 7cqw;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: #171717;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background var(--dur-fast) var(--ease-out);
+}
+.mission-poster__social a:hover { background: var(--brand-accent); }
+.mission-poster__social svg { width: 55%; height: 55%; }
