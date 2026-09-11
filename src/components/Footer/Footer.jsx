@@ -1,17 +1,10 @@
 import { Link } from 'react-router-dom';
 import { FOOTER_NAV } from '../../data/navigation';
 import { COMPANY } from '../../data/company';
+import { SOCIAL_LINKS } from '../../data/social';
 import Icon from '../Icon/Icon';
 import logo from '../../assets/brand/isn-logo.png';
 import './Footer.css';
-
-const SOCIAL_LINKS = [
-  { name: 'youtube', label: 'YouTube', href: 'https://www.youtube.com/@isnbusinesssolutions8698' },
-  { name: 'instagram', label: 'Instagram', href: 'https://www.instagram.com/_isngroup_/' },
-  { name: 'facebook', label: 'Facebook', href: 'https://www.facebook.com/isnbusinesssolutionsllp' },
-  { name: 'twitter', label: 'Twitter', href: 'https://x.com/isnbusiness' },
-  { name: 'linkedin', label: 'LinkedIn', href: 'https://www.linkedin.com/company/isnbusinesssolutionsllp/' },
-];
 
 export default function Footer() {
   const year = new Date().getFullYear();

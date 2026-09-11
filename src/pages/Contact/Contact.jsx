@@ -2,15 +2,13 @@ import SEO from '../../components/SEO/SEO';
 import { breadcrumbSchema } from '../../components/SEO/schema';
 import Icon from '../../components/Icon/Icon';
 import ContactForm from '../../components/ContactForm/ContactForm';
-import { COMPANY } from '../../data/company';
-import { useUI } from '../../context/UIContext';
+import MissionPoster from '../../components/MissionPoster/MissionPoster';
+import { LOCATIONS } from '../../data/company';
 import { submitContact } from '../../lib/api';
 import { trackContactCompleted } from '../../lib/analytics';
 import './Contact.css';
 
 export default function Contact() {
-  const { openCalendar, openChat } = useUI();
-
   async function handleSubmit(data) {
     await submitContact(data);
     trackContactCompleted({ service: data.service });
@@ -40,50 +38,62 @@ export default function Contact() {
           </div>
 
           <div className="contact-side-col">
-            <button type="button" className="card contact-option" onClick={() => openChat('contact_page')}>
-              <div className="contact-option__icon"><Icon name="chat" size={20} /></div>
-              <div>
-                <h3 className="h4">Talk to Rebecca</h3>
-                <p className="text-muted body-sm">Get instant answers and get qualified in minutes.</p>
+            <MissionPoster />
+          </div>
+        </div>
+      </section>
+
+      <section className="section section--off">
+        <div className="container">
+          <div className="contact-locations">
+            {LOCATIONS.map((loc) => (
+              <div className="contact-location" key={loc.city}>
+                <div className="contact-location__info">
+                  <p className="contact-location__city">[ {loc.city.toUpperCase()} ]</p>
+
+                  <div className="contact-location__row">
+                    <div className="contact-location__icon"><Icon name="pin" size={16} /></div>
+                    <div>
+                      <h4 className="h4">Address</h4>
+                      <p className="text-muted body-sm">{loc.address}</p>
+                    </div>
+                  </div>
+
+                  <div className="contact-location__row">
+                    <div className="contact-location__icon"><Icon name="phone" size={16} /></div>
+                    <div>
+                      <h4 className="h4">Call Us</h4>
+                      <a href={`tel:${loc.phone.replace(/[^+\d]/g, '')}`} className="text-muted body-sm">{loc.phone}</a>
+                    </div>
+                  </div>
+
+                  <div className="contact-location__row">
+                    <div className="contact-location__icon"><Icon name="mail" size={16} /></div>
+                    <div>
+                      <h4 className="h4">Email Address</h4>
+                      <a href={`mailto:${loc.email}`} className="text-muted body-sm">{loc.email}</a>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="contact-location__map">
+                  <a
+                    className="contact-location__open-maps"
+                    href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(loc.address)}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Open in Maps <Icon name="arrow-up-right" size={14} />
+                  </a>
+                  <iframe
+                    title={`iSN ${loc.city} office location`}
+                    src={`https://www.google.com/maps?q=${encodeURIComponent(loc.address)}&output=embed`}
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                  />
+                </div>
               </div>
-            </button>
-
-            <button type="button" className="card contact-option" onClick={openCalendar}>
-              <div className="contact-option__icon"><Icon name="calendar" size={20} /></div>
-              <div>
-                <h3 className="h4">Book a Strategy Call</h3>
-                <p className="text-muted body-sm">Pick a time that works and talk to our team directly.</p>
-              </div>
-            </button>
-
-            <div className="card contact-details">
-              <h3 className="h4">Reach Us Directly</h3>
-              <a href={`mailto:${COMPANY.email}`} className="contact-details__row">
-                <Icon name="mail" size={16} /> {COMPANY.email}
-              </a>
-              {COMPANY.phones.map((p) => (
-                <a href={`tel:${p.number.replace(/[^+\d]/g, '')}`} className="contact-details__row" key={p.label}>
-                  <Icon name="phone" size={16} /> {p.number} <span className="text-muted body-sm">({p.label})</span>
-                </a>
-              ))}
-              <a
-                href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(COMPANY.address)}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="contact-details__row"
-              >
-                <Icon name="pin" size={16} /> {COMPANY.address}
-              </a>
-            </div>
-
-            <div className="card contact-map">
-              <iframe
-                title="iSN office location"
-                src={`https://www.google.com/maps?q=${encodeURIComponent(COMPANY.address)}&output=embed`}
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-              />
-            </div>
+            ))}
           </div>
         </div>
       </section>
