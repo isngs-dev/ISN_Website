@@ -12,6 +12,10 @@ dist
 dist-ssr
 *.local
 
+# Real SendGrid credentials for the PHP mail endpoints (see
+# public/api/_lib/config.example.php) — never commit this.
+public/api/_lib/config.php
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

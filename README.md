@@ -61,10 +61,12 @@ below before launch:
 - `[LEGAL REVIEW REQUIRED]` — Privacy/Terms pages are drafts, not final legal copy
 
 ### API adapters (`src/lib/api.js`)
-`submitLead`, `submitContact`, `sendChatMessage`, `submitBooking` currently
-resolve with a mocked response after a simulated delay. Set the corresponding
-`VITE_*_API_URL` env vars and replace `mockRequest()` with a real `fetch()`
-call (a commented example is included in the file) once backend endpoints exist.
+`submitContact` and `submitBooking` are real — they POST to `public/api/contact.php`
+and `public/api/book.php`, which send lead notification + confirmation emails
+via SendGrid (see `public/api/_lib/`). `submitLead` and `sendChatMessage`
+still resolve with a mocked response after a simulated delay; set the
+corresponding `VITE_*_API_URL` env vars and replace `mockRequest()` with a
+real `fetch()` call once those backend endpoints exist.
 
 ### CRM
 Set `VITE_CRM_PROVIDER` (`hubspot` | `salesforce` | `gohighlevel` | `zoho` |

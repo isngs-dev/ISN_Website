@@ -1,0 +1,14 @@
+# SPA fallback: serve index.html for any request that isn't a real file or
+# directory (client-side routes like /about, /contact, /solutions/...).
+# Ignored entirely if this host is actually IIS (see web.config instead).
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  RewriteCond %{REQUEST_FILENAME} -f
+  RewriteRule ^ - [L]
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ - [L]
+
+  RewriteRule ^ index.html [L]
+</IfModule>

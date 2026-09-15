@@ -15,6 +15,7 @@ export default function ContactForm({ onSubmit, submitLabel = 'Submit' }) {
   const [data, setData] = useState(EMPTY_FORM);
   const [submitting, setSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState('');
 
   function update(field, value) {
     setData((d) => ({ ...d, [field]: value }));
@@ -23,9 +24,15 @@ export default function ContactForm({ onSubmit, submitLabel = 'Submit' }) {
   async function handleSubmit(e) {
     e.preventDefault();
     setSubmitting(true);
-    await onSubmit(data);
-    setSubmitting(false);
-    setSubmitted(true);
+    setError('');
+    try {
+      await onSubmit(data);
+      setSubmitted(true);
+    } catch {
+      setError("Something went wrong sending your message. Please try again or email us directly.");
+    } finally {
+      setSubmitting(false);
+    }
   }
 
   if (submitted) {
@@ -68,6 +75,7 @@ export default function ContactForm({ onSubmit, submitLabel = 'Submit' }) {
         Message
         <textarea rows={3} placeholder="Tell us about your business or what you're looking for" value={data.message} onChange={(e) => update('message', e.target.value)} />
       </label>
+      {error && <p className="cform__error">{error}</p>}
       <Button type="submit" variant="primary" className="btn--block" arrow disabled={submitting}>
         {submitting ? 'Sending…' : submitLabel}
       </Button>
